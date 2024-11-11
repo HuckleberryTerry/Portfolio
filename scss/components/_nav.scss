@@ -1,0 +1,79 @@
+
+header{
+    .container{
+        display:flex;
+        justify-content:center;
+        text-align: center;
+        background-color:#333546;
+        height:100%;
+        &-nav{
+            overflow:hidden;
+            background-color:#333546;
+            position:relative;
+            padding:10px;
+            & ul{
+                display:block;
+                width:100%;
+                &>li{
+                    margin:0;
+                    &>a{
+                        display:block;
+                        position:relative;
+                        padding:10px 0;
+                        width:15%;
+                        font-size:.8rem;
+                        text-decoration:none;
+                        color:white;
+                        background-color:#222435;
+                        border-color: rgba(25,25,25,.75);
+                        transition: width 10s, linear;
+                        &:focus, &:hover, &:active{
+                            text-align:end;
+                            width: 90%;
+                            padding:10px 70px;
+                            background-color:rgba(25,25,25,.75);
+                            border-radius:0 20px 20px 0;
+                        }
+                    }
+                }
+            }
+
+            &-about{
+                &:focus::after, &:hover::after{
+                    content:'about me';
+                }
+            }
+            &-portfolio{
+                &:focus::after, &:hover::after{
+                    content:'My Portfolio';
+                }
+            }
+            &-examples{
+                &:focus::after, &:hover::after{
+                    content:'Coding Examples';
+                }
+            }
+            &-scs{
+                &:focus::after, &:hover::after{
+                    content:'Scion Coalition Scheme';
+                }
+            }
+            &-contact{
+                &:focus::after, &:hover::after{
+                    content:'Contact Me';
+
+                }
+            }
+            //This should be for the desktop view
+            // display:inline-flex;
+            // flex-direction: row;
+            // flex-wrap:wrap;
+            // height:100%;
+            // width:150px;
+            // float:left;
+            // background-color:#333551;
+            // margin-bottom:100%;
+            // padding-bottom:100%;
+        }
+    }
+}
