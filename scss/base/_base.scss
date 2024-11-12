@@ -8,8 +8,10 @@ body{
 }
 *{
     box-sizing:border-box;
-    overflow:hidden;
 }
 .container{
     margin:0 auto;
+}
+.middle{
+    overflow:hidden;
 }

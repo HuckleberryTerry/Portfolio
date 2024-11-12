@@ -425,11 +425,14 @@ body {
 
 * {
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .container {
   margin: 0 auto;
+}
+
+.middle {
+  overflow: hidden;
 }
 
 @font-face {
@@ -674,12 +677,29 @@ body {
   content: "\e905";
 }
 
+.header .container {
+  z-index: 0;
+  display: flex;
+}
+.header .container-hero {
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: hidden;
+}
+.header .container-hero img {
+  position: relative;
+  min-height: 490px;
+  min-width: 375px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .middle {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 576px;
 }
 .middle .container-proj {
   width: 300px;
@@ -690,28 +710,33 @@ body {
   height: 40px;
 }
 
-header .container {
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header .container .logo {
+  display: none;
+}
+header .container-nav {
+  position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
   background-color: #333546;
   height: 100%;
 }
-header .container-nav {
-  overflow: hidden;
-  background-color: #333546;
-  position: relative;
-  padding: 10px;
-}
 header .container-nav ul {
   display: block;
   width: 100%;
+  background-color: #333546;
 }
 header .container-nav ul > li {
   margin: 0;
 }
 header .container-nav ul > li > a {
-  display: block;
+  display: flex;
+  justify-content: center;
   position: relative;
   padding: 10px 0;
   width: 15%;
@@ -720,14 +745,12 @@ header .container-nav ul > li > a {
   color: white;
   background-color: #222435;
   border-color: rgba(25, 25, 25, 0.75);
-  transition: width 10s, linear;
+  transition: width ease 0.5s;
 }
 header .container-nav ul > li > a:focus, header .container-nav ul > li > a:hover, header .container-nav ul > li > a:active {
-  text-align: end;
-  width: 90%;
+  width: 100%;
   padding: 10px 70px;
   background-color: rgba(25, 25, 25, 0.75);
-  border-radius: 0 20px 20px 0;
 }
 header .container-nav-about:focus::after, header .container-nav-about:hover::after {
   content: "about me";
