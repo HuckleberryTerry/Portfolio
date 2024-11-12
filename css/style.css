@@ -719,51 +719,84 @@ header .container .logo {
   display: none;
 }
 header .container-nav {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: #333546;
+  background-color: rgba(25, 25, 55, 0.7);
   height: 100%;
+  width: 100%;
 }
-header .container-nav ul {
+header .container-nav .nested-hamburger {
   display: block;
   width: 100%;
-  background-color: #333546;
+  background-color: rgba(25, 25, 55, 0.3);
 }
-header .container-nav ul > li {
-  margin: 0;
-}
-header .container-nav ul > li > a {
+header .container-nav .nested-hamburger > li > a {
+  height: 56px;
+  width: 56px;
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 10px 0;
-  width: 15%;
-  font-size: 0.8rem;
+  padding-top: 20px;
+  font-size: 1rem;
   text-decoration: none;
   color: white;
-  background-color: #222435;
+  background-color: rgba(25, 25, 25, 0.75);
   border-color: rgba(25, 25, 25, 0.75);
   transition: width ease 0.5s;
 }
-header .container-nav ul > li > a:focus, header .container-nav ul > li > a:hover, header .container-nav ul > li > a:active {
+header .container-nav .nested-hamburger > li > a + .nested-contents {
+  display: none;
+}
+header .container-nav .nested-hamburger > li > a:focus, header .container-nav .nested-hamburger > li > a:hover, header .container-nav .nested-hamburger > li > a:active, header .container-nav .nested-hamburger > li > a:focus-visible {
   width: 100%;
-  padding: 10px 70px;
+  padding: 20px 70px;
   background-color: rgba(25, 25, 25, 0.75);
+  outline: 10px;
+  outline-color: red;
 }
-header .container-nav-about:focus::after, header .container-nav-about:hover::after {
-  content: "about me";
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents, header .container-nav .nested-hamburger > li > a:hover + .nested-contents, header .container-nav .nested-hamburger > li > a:active + .nested-contents, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(25, 25, 55, 0.7);
 }
-header .container-nav-portfolio:focus::after, header .container-nav-portfolio:hover::after {
-  content: "My Portfolio";
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents > a:focus, header .container-nav .nested-hamburger > li > a:hover + .nested-contents > a:focus, header .container-nav .nested-hamburger > li > a:active + .nested-contents > a:focus, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents > a:focus {
+  background-color: rgba(255, 255, 255, 0.8);
 }
-header .container-nav-examples:focus::after, header .container-nav-examples:hover::after {
-  content: "Coding Examples";
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span, header .container-nav .nested-hamburger > li > a:active + .nested-contents span, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span {
+  color: white;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-header .container-nav-scs:focus::after, header .container-nav-scs:hover::after {
-  content: "Scion Coalition Scheme";
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question {
+  width: 100%;
 }
-header .container-nav-contact:focus::after, header .container-nav-contact:hover::after {
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question::after {
+  content: " about me";
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open {
+  width: 100%;
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open::after {
+  content: " Portfolio";
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2 {
+  width: 100%;
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2::after {
+  content: " Coding Examples";
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school {
+  width: 100%;
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school::after {
+  content: " SCS";
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope {
+  width: 100%;
+}
+header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope::after {
   content: "Contact Me";
 }/*# sourceMappingURL=style.css.map */

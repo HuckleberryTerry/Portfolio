@@ -8,65 +8,95 @@ header{
             display:none;
         }
         &-nav{
-            position:relative;
+            position:absolute;
             display:flex;
             justify-content:center;
             text-align: center;
-            background-color:#333546;
+            background-color:rgba(25,25,55,.7);
             height:100%;
-            & ul{
+            width:100%;
+            & .nested-hamburger{
                 display:block;
                 width:100%;
-                background-color:#333546;
+                background-color:rgba(25,25,55,.3);
                 &>li{
-                    margin:0;
                     &>a{
+                        height:56px;
+                        width:56px;
                         display:flex;
                         justify-content: center;
                         position:relative;
-                        padding:10px 0;
-                        width: 15%;
-                        font-size:.8rem;
+                        //margin:auto;
+                        padding-top:20px;
+                        //width: 15%;
+                        font-size:1rem;
                         text-decoration:none;
                         color:white;
-                        background-color:#222435;
+                        background-color:rgba(25,25,25,.75);
                         border-color: rgba(25,25,25,.75);
                         transition: width ease .5s;
-                        &:focus, &:hover, &:active{
+                        & + .nested-contents{
+                            display:none;
+                        }
+                        &:focus, &:hover, &:active, &:focus-visible{
                             width: 100%;
-                            padding:10px 70px;
+                            padding:20px 70px;
                             background-color:rgba(25,25,25,.75);
+                            outline:10px;
+                            outline-color:red;
+                            & + .nested-contents{
+                                display:flex;
+                                flex-direction:column;
+                                background-color: rgba(25,25,55,.7);
+                                & > a:focus{
+                                    background-color:rgba(255,255,255,.8);
+                                }
+                                span{
+                                    color:white;
+                                    float:left;
+                                    //padding-left:75px;
+                                    padding-top:10px;
+                                    padding-bottom:10px;
+                                    //text-align:center;
+                                    &.icon-question{
+                                        width:100%;
+                                        &::after{
+                                            content:' about me';
+                                        }
+                                    }
+                                    &.icon-folder-open{
+                                        width:100%;
+                                        &::after{
+                                            content:' Portfolio';
+                                        }
+                                    }
+                                    &.icon-embed2{
+                                        width:100%;
+                                        &::after{
+                                            content:' Coding Examples';
+                                        }
+                                    }
+                                    &.icon-school{
+                                        width:100%;
+                                        &::after{
+                                            content:' SCS';
+                                        }
+                                    }
+                                    &.icon-envelope{
+                                        width:100%;
+                                        &::after{
+                                            content:'Contact Me';
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
 
-            &-about{
-                &:focus::after, &:hover::after{
-                    content:'about me';
-                }
-            }
-            &-portfolio{
-                &:focus::after, &:hover::after{
-                    content:'My Portfolio';
-                }
-            }
-            &-examples{
-                &:focus::after, &:hover::after{
-                    content:'Coding Examples';
-                }
-            }
-            &-scs{
-                &:focus::after, &:hover::after{
-                    content:'Scion Coalition Scheme';
-                }
-            }
-            &-contact{
-                &:focus::after, &:hover::after{
-                    content:'Contact Me';
 
-                }
-            }
+           
             //This should be for the desktop view
             // display:inline-flex;
             // flex-direction: row;
