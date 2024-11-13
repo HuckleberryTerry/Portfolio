@@ -7,6 +7,7 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 html {
   font-family: sans-serif; /* 1 */
   line-height: 1.15; /* 2 */
@@ -425,6 +426,7 @@ body {
 
 * {
   box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 .container {
@@ -680,19 +682,38 @@ body {
 .header .container {
   z-index: 0;
   display: flex;
-}
-.header .container-hero {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  overflow: hidden;
-}
-.header .container-hero img {
-  position: relative;
+  background-image: url("../assets/images/kelly-sikkema-r077pfFsdaU-unsplash.jpg");
+  background-size: cover;
   min-height: 490px;
   min-width: 375px;
-  max-width: 100%;
   max-height: 100%;
+  max-width: 100%;
+}
+.header .container .container-hero-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .container .container-hero-text .hero-name {
+  display: block;
+  position: relative;
+  z-index: 1;
+  color: white;
+  top: 40%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .container .container-hero-text .hero-description {
+  display: block;
+  position: relative;
+  color: white;
+  z-index: 1;
+  top: 42.5%;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .middle {
@@ -700,20 +721,32 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 35px 15px;
+  background-color: #000;
 }
 .middle .container-proj {
   width: 300px;
   margin: 0 auto;
+  text-align: center;
+}
+.middle .container-proj--module {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto Flex", sans-serif;
 }
 .middle .container-proj--module img {
-  width: 60px;
-  height: 40px;
+  min-width: 60px;
+  min-height: 40px;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 header .container .logo {
   display: none;
@@ -774,29 +807,34 @@ header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.i
   width: 100%;
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question::after {
+  font-family: "Roboto Flex", sans-serif;
   content: " about me";
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open {
   width: 100%;
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open::after {
+  font-family: "Roboto Flex", sans-serif;
   content: " Portfolio";
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2 {
   width: 100%;
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2::after {
+  font-family: "Roboto Flex", sans-serif;
   content: " Coding Examples";
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school {
   width: 100%;
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school::after {
+  font-family: "Roboto Flex", sans-serif;
   content: " SCS";
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope {
   width: 100%;
 }
 header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope::after {
+  font-family: "Roboto Flex", sans-serif;
   content: "Contact Me";
 }/*# sourceMappingURL=style.css.map */
