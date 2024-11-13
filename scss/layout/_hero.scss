@@ -14,21 +14,23 @@
         z-index:0;
         display:flex;
         background-image:url('../assets/images/kelly-sikkema-r077pfFsdaU-unsplash.jpg');
+        background-color:rgba(187, 120, 32, 0.603);
+        background-blend-mode: luminosity;
         background-size:cover;
         background-position: center;
-        min-height:490px;
+        min-height:100vh;
         min-width:375px;
         height:100%;
         width:100%;
         margin-left:auto;
         margin-right:auto;
+        border-radius: 0 0 25px 25px;
         .container-hero-text{
             margin-left:auto;
             margin-right:auto;
             .hero{
                 &-name{
-                    font-size:2rem;
-                    display:block;
+                    display:flex;
                     position:relative;
                     z-index:1;
                     color:white;
@@ -36,6 +38,7 @@
                     right:0;
                     left:0;
                     bottom:0;
+                    justify-content:center;
                 }
                 &-description{
                     overflow:hidden;
@@ -47,8 +50,21 @@
                     right:0;
                     left:0;
                     bottom:0;
-                    margin-left:auto;
-                    margin-right:auto;
+                    justify-content:center;
+                }
+            }
+        }
+    }
+    @include mq('m'){
+        .container{
+            .container-hero-text{
+                .hero{
+                    &-name{
+                        font-size:2rem;
+                    } 
+                    &-description{
+                        font-size:2rem;
+                    }
                 }
             }
         }

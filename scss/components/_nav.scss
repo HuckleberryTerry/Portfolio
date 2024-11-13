@@ -1,97 +1,127 @@
 
 header{
-        position:sticky;
-        top:0;
-        z-index:2;
-        
-    .container{
-        & .logo{
-            display:none;
-        }
-        &-nav{
-            position:absolute;
-            display:flex;
-            justify-content:center;
-            text-align: center;
-            background-color:rgba(25,25,55,.7);
-            height:100%;
-            width:100%;
-            & .nested-hamburger{
-                display:block;
+    &.hidden-l, &.hidden-xl{
+            position:sticky;
+            top:0;
+            z-index:2;
+            
+        .container{
+            & .logo{
+                display:none;
+            }
+            &-nav{
+                position:absolute;
+                display:flex;
+                justify-content:center;
+                text-align: center;
+                background-color:rgba(25,25,55,.7);
+                height:100%;
                 width:100%;
-                background-color:rgba(25,25,55,.3);
-                &>li{
-                    &>a{
-                        height:56px;
-                        width:56px;
-                        display:flex;
-                        justify-content: center;
-                        position:relative;
-                        //margin:auto;
-                        padding-top:20px;
-                        //width: 15%;
-                        font-size:1rem;
-                        text-decoration:none;
-                        color:white;
-                        background-color:rgba(25,25,25,.75);
-                        border-color: rgba(25,25,25,.75);
-                        transition: width ease .5s;
-                        & + .nested-contents{
-                            display:none;
-                        }
-                        &:focus, &:hover, &:active, &:focus-visible{
-                            width: 100%;
-                            padding:20px 70px;
+                & .nested-hamburger{
+                    display:block;
+                    width:100%;
+                    background-color:rgba(25,25,55,.3);
+                    &>li{
+                        &>a{
+                            height:56px;
+                            width:56px;
+                            display:flex;
+                            justify-content: center;
+                            position:relative;
+                            //margin:auto;
+                            padding-top:20px;
+                            //width: 15%;
+                            font-size:1rem;
+                            text-decoration:none;
+                            color:white;
                             background-color:rgba(25,25,25,.75);
-                            outline:10px;
-                            outline-color:red;
+                            border-color: rgba(25,25,25,.75);
+                            transition: width ease .5s;
                             & + .nested-contents{
-                                display:flex;
-                                flex-direction:column;
-                                background-color: rgba(25,25,55,.7);
-                                & > a:focus{
-                                    background-color:rgba(255,255,255,.8);
-                                }
-                                span{
-                                    color:white;
-                                    float:left;
-                                    //padding-left:75px;
-                                    padding-top:10px;
-                                    padding-bottom:10px;
-                                    //text-align:center;
-                                    &.icon-question{
-                                        width:100%;
-                                        &::after{
-                                            font-family:$Roboto-Flex;
-                                            content:' about me';
-                                        }
+                                display:none;
+                            }
+                            &:focus, &:hover, &:active, &:focus-visible{
+                                width: 100%;
+                                padding:20px 70px;
+                                background-color:rgba(25,25,25,.75);
+                                & + .nested-contents{
+                                    display:flex;
+                                    flex-direction:column;
+                                    background-color: rgba(25,25,55,.7);
+                                    & > a:focus{
+                                        background-color:rgba(255,255,255,.8);
                                     }
-                                    &.icon-folder-open{
-                                        width:100%;
-                                        &::after{
-                                            font-family:$Roboto-Flex;
-                                            content:' Portfolio';
+                                    span{
+                                        color:white;
+                                        float:left;
+                                        //padding-left:75px;
+                                        padding-top:10px;
+                                        padding-bottom:10px;
+                                        //text-align:center;
+                                        &.icon-question{
+                                            width:100%;
+                                            @include mq('m'){
+                                                font-size:2rem;
+                                            }
+                                            &::after{
+                                                font-family:$Roboto-Flex;
+                                                content:' about me';
+                                                @include mq('m'){
+                                                    font-size:2rem;
+                                                }
+                                            }
                                         }
-                                    }
-                                    &.icon-embed2{
-                                        width:100%;
-                                        &::after{
-                                            font-family:$Roboto-Flex;
-                                            content:' Coding Examples';
+                                        &.icon-folder-open{
+                                            width:100%;
+                                            @include mq('m'){
+                                                font-size:2rem;
+                                            }
+                                            &::after{
+                                                font-family:$Roboto-Flex;
+                                                content:' Portfolio';
+                                                @include mq('m'){
+                                                    font-size:2rem;
+                                                }
+                                            }
                                         }
-                                    }
-                                    &.icon-school{
-                                        width:100%;
-                                        &::after{
-                                            font-family:$Roboto-Flex;
-                                            content:' SCS';
+                                        &.icon-embed2{
+                                            width:100%;
+                                            @include mq('m'){
+                                                font-size:2rem;
+                                            }
+                                            &::after{
+                                                font-family:$Roboto-Flex;
+                                                content:' Coding Examples';
+                                                @include mq('m'){
+                                                    font-size:2rem;
+                                                }
+                                            }
                                         }
-                                    }
-                                    &.icon-envelope{
-                                        width:100%;
-                                        &::after{
-                                            font-family:$Roboto-Flex;
-                                            content:'Contact Me';
+                                        &.icon-school{
+                                            width:100%;
+                                            @include mq('m'){
+                                                font-size:2rem;
+                                            }
+                                            &::after{
+                                                font-family:$Roboto-Flex;
+                                                content:' SCS';
+                                                @include mq('m'){
+                                                    font-size:2rem;
+                                                }
+                                            }
+                                        }
+                                        &.icon-envelope{
+                                            width:100%;
+                                            @include mq('m'){
+                                                font-size:2rem;
+                                            }
+                                            &::after{
+                                                font-family:$Roboto-Flex;
+                                                content:'Contact Me';
+                                                @include mq('m'){
+                                                    font-size:2rem;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -99,20 +129,274 @@ header{
                         }
                     }
                 }
+
+
+            
+                //This should be for the desktop view
+                
+                @include mq('m'){
+                    & .nested-hamburger{
+                        height:100%;
+                        width:100%;
+                        &>li{
+                            &>a{
+                                width:76px;
+                                height:76px;
+                                display:flex;
+                                justify-content:center;
+                                font-size:2rem;
+                            }
+                        }
+                    }
+                }
+                @include mq('l'){
+                    display:none;
+                }
+                @include mq('xl'){
+                    display:none;
+                }
             }
-
-
-           
-            //This should be for the desktop view
-            // display:inline-flex;
-            // flex-direction: row;
-            // flex-wrap:wrap;
-            // height:100%;
-            // width:150px;
-            // float:left;
-            // background-color:#333551;
-            // margin-bottom:100%;
-            // padding-bottom:100%;
+        }
+    }
+    &.visible-l, &.visible-xl{
+        display:none;
+        @include mq('l'){
+            display:flex;
+            flex-direction:row;
+            position:absolute;
+            width:15%;
+            max-width:190px;
+            height:100%;
+            min-height:250vh;
+            background:rgba(25,25,25,.7);
+            & .contents{
+                display:flex;
+                flex-direction:column;
+                margin-left:auto;
+                margin-right:auto;
+                & .logo{
+                    &-container{
+                        position:relative;
+                        display:flex;
+                        flex-direction: row;
+                        padding-top:55px;
+                    }
+                    &-img{
+                        width:100%;
+                        max-width:100px;
+                        margin-left:auto;
+                        margin-right:auto;
+                        padding-bottom:15px;
+                    }
+                }
+                & .container{
+                    &-nav{
+                        &-about{
+                            display:flex;
+                            text-decoration:none;
+                            color:white;
+                            padding:15px 0;
+                            & > span{
+                                display:none
+                            }
+                            &::after{
+                                margin-left:auto;
+                                margin-right:auto;
+                                content:'About Me';
+                            }
+                            &:hover, &:focus{
+                                background-color:rgba(0,0,0,.75);
+                            }
+                        }
+                        &-portfolio{
+                            display:flex;
+                            text-decoration:none;
+                            color:white;
+                            padding:15px 0;
+                            & > span{
+                                display:none
+                            }
+                            &::after{
+                                margin-left:auto;
+                                margin-right:auto;
+                                content:'My Portfolio';
+                            }
+                            &:hover, &:focus{
+                                background-color:rgba(0,0,0,.75);
+                            }
+                        }
+                        &-examples{
+                            display:flex;
+                            text-decoration:none;
+                            color:white;
+                            padding:15px 0;
+                            & > span{
+                                display:none
+                            }
+                            &::after{
+                                margin-left:auto;
+                                margin-right:auto;
+                                content:'Coding Examples';
+                            }
+                            &:hover, &:focus{
+                                background-color:rgba(0,0,0,.75);
+                            }
+                        }
+                        &-scs{
+                            display:flex;
+                            text-decoration:none;
+                            color:white;
+                            padding:15px 0;
+                            & > span{
+                                display:none
+                            }
+                            &::after{
+                                margin-left:auto;
+                                margin-right:auto;
+                                text-align:center;
+                                content:'Scion Coalition Scheme';
+                            }
+                            &:hover, &:focus{
+                                background-color:rgba(0,0,0,.75);
+                            }
+                        }
+                        &-contact{
+                            display:flex;
+                            text-decoration:none;
+                            color:white;
+                            padding:15px 0;
+                            & > span{
+                                display:none
+                            }
+                            &::after{
+                                margin-left:auto;
+                                margin-right:auto;
+                                content:'Contact Me';
+                            }
+                            &:hover, &:focus{
+                                background-color:rgba(0,0,0,.75);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include mq('xl'){
+            display:flex;
+            flex-direction:row;
+            position:absolute;
+            width:15%;
+            max-width:380px;
+            height:100%;
+            min-height:250vh;
+            background:rgba(25,25,25,.7);
+            & .contents{
+                display:flex;
+                flex-direction:column;
+                margin-left:auto;
+                margin-right:auto;
+                width:100%;
+                & .logo{
+                    &-container{
+                        position:relative;
+                        display:flex;
+                        flex-direction: row;
+                        padding-top:55px;
+                    }
+                    &-img{
+                        width:100%;
+                    }
+                    & .container{
+                        &-nav{
+                            &-about{
+                                display:flex;
+                                text-decoration:none;
+                                color:white;
+                                padding:15px 0;
+                                & > span{
+                                    display:none
+                                }
+                                &::after{
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    content:'About Me';
+                                }
+                                &:hover, &:focus{
+                                    background-color:rgba(0,0,0,.75);
+                                }
+                            }
+                            &-portfolio{
+                                display:flex;
+                                text-decoration:none;
+                                color:white;
+                                padding:15px 0;
+                                & > span{
+                                    display:none
+                                }
+                                &::after{
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    content:'My Portfolio';
+                                }
+                                &:hover, &:focus{
+                                    background-color:rgba(0,0,0,.75);
+                                }
+                            }
+                            &-examples{
+                                display:flex;
+                                text-decoration:none;
+                                color:white;
+                                padding:15px 0;
+                                & > span{
+                                    display:none
+                                }
+                                &::after{
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    content:'Coding Examples';
+                                }
+                                &:hover, &:focus{
+                                    background-color:rgba(0,0,0,.75);
+                                }
+                            }
+                            &-scs{
+                                display:flex;
+                                text-decoration:none;
+                                color:white;
+                                padding:15px 0;
+                                & > span{
+                                    display:none
+                                }
+                                &::after{
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    content:'Scion Coalition Scheme';
+                                }
+                                &:hover, &:focus{
+                                    background-color:rgba(0,0,0,.75);
+                                }
+                            }
+                            &-contact{
+                                display:flex;
+                                text-decoration:none;
+                                color:white;
+                                padding:15px 0;
+                                & > span{
+                                    display:none
+                                }
+                                &::after{
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    content:'Contact Me';
+                                }
+                                &:hover, &:focus{
+                                    background-color:rgba(0,0,0,.75);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
