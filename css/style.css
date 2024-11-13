@@ -683,22 +683,24 @@ body {
   z-index: 0;
   display: flex;
   background-image: url("../assets/images/kelly-sikkema-r077pfFsdaU-unsplash.jpg");
+  background-color: rgba(187, 120, 32, 0.603);
+  background-blend-mode: luminosity;
   background-size: cover;
   background-position: center;
-  min-height: 490px;
+  min-height: 100vh;
   min-width: 375px;
   height: 100%;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 0 0 25px 25px;
 }
 .header .container .container-hero-text {
   margin-left: auto;
   margin-right: auto;
 }
 .header .container .container-hero-text .hero-name {
-  font-size: 2rem;
-  display: block;
+  display: flex;
   position: relative;
   z-index: 1;
   color: white;
@@ -706,6 +708,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+  justify-content: center;
 }
 .header .container .container-hero-text .hero-description {
   overflow: hidden;
@@ -717,8 +720,15 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .header .container .container-hero-text .hero-name {
+    font-size: 2rem;
+  }
+  .header .container .container-hero-text .hero-description {
+    font-size: 2rem;
+  }
 }
 
 .middle {
@@ -751,23 +761,46 @@ body {
 }
 .middle .container-proj--module h2 {
   display: inline-flex;
+  margin-left: 0;
+  padding: 5px 0 5px 5px;
 }
 .middle .container-proj--module p {
   display: inline-flex;
   justify-content: flex-end;
   margin: 0;
-  padding: 0;
+  padding: 5px 2px 5px 0;
+}
+@media (min-width: 992px) {
+  .middle {
+    padding-left: 100px;
+  }
+  .middle .container-proj {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 270px 270px 270px;
+    justify-content: center;
+    grid-gap: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .middle .container-proj {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 290px 290px;
+    justify-content: center;
+    grid-gap: 15px;
+  }
 }
 
-header {
+header.hidden-l, header.hidden-xl {
   position: sticky;
   top: 0;
   z-index: 2;
 }
-header .container .logo {
+header.hidden-l .container .logo, header.hidden-xl .container .logo {
   display: none;
 }
-header .container-nav {
+header.hidden-l .container-nav, header.hidden-xl .container-nav {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -776,12 +809,12 @@ header .container-nav {
   height: 100%;
   width: 100%;
 }
-header .container-nav .nested-hamburger {
+header.hidden-l .container-nav .nested-hamburger, header.hidden-xl .container-nav .nested-hamburger {
   display: block;
   width: 100%;
   background-color: rgba(25, 25, 55, 0.3);
 }
-header .container-nav .nested-hamburger > li > a {
+header.hidden-l .container-nav .nested-hamburger > li > a, header.hidden-xl .container-nav .nested-hamburger > li > a {
   height: 56px;
   width: 56px;
   display: flex;
@@ -795,62 +828,366 @@ header .container-nav .nested-hamburger > li > a {
   border-color: rgba(25, 25, 25, 0.75);
   transition: width ease 0.5s;
 }
-header .container-nav .nested-hamburger > li > a + .nested-contents {
+header.hidden-l .container-nav .nested-hamburger > li > a + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a + .nested-contents {
   display: none;
 }
-header .container-nav .nested-hamburger > li > a:focus, header .container-nav .nested-hamburger > li > a:hover, header .container-nav .nested-hamburger > li > a:active, header .container-nav .nested-hamburger > li > a:focus-visible {
+header.hidden-l .container-nav .nested-hamburger > li > a:focus, header.hidden-l .container-nav .nested-hamburger > li > a:hover, header.hidden-l .container-nav .nested-hamburger > li > a:active, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible, header.hidden-xl .container-nav .nested-hamburger > li > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:hover, header.hidden-xl .container-nav .nested-hamburger > li > a:active, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible {
   width: 100%;
   padding: 20px 70px;
   background-color: rgba(25, 25, 25, 0.75);
-  outline: 10px;
-  outline-color: red;
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents, header .container-nav .nested-hamburger > li > a:hover + .nested-contents, header .container-nav .nested-hamburger > li > a:active + .nested-contents, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents {
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents {
   display: flex;
   flex-direction: column;
   background-color: rgba(25, 25, 55, 0.7);
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents > a:focus, header .container-nav .nested-hamburger > li > a:hover + .nested-contents > a:focus, header .container-nav .nested-hamburger > li > a:active + .nested-contents > a:focus, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents > a:focus {
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents > a:focus, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents > a:focus, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents > a:focus, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents > a:focus {
   background-color: rgba(255, 255, 255, 0.8);
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span, header .container-nav .nested-hamburger > li > a:active + .nested-contents span, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span {
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span {
   color: white;
   float: left;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question {
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question {
   width: 100%;
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question::after {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question::after {
   font-family: "Roboto Flex", sans-serif;
   content: " about me";
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-question::after {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open {
   width: 100%;
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open::after {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open::after {
   font-family: "Roboto Flex", sans-serif;
   content: " Portfolio";
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2 {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-folder-open::after {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2 {
   width: 100%;
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2::after {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2 {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2::after {
   font-family: "Roboto Flex", sans-serif;
   content: " Coding Examples";
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-embed2::after {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school {
   width: 100%;
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school::after {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school::after {
   font-family: "Roboto Flex", sans-serif;
   content: " SCS";
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-school::after {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope {
   width: 100%;
 }
-header .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope::after {
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope {
+    font-size: 2rem;
+  }
+}
+header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope::after {
   font-family: "Roboto Flex", sans-serif;
   content: "Contact Me";
+}
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus-visible + .nested-contents span.icon-envelope::after {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  header.hidden-l .container-nav .nested-hamburger, header.hidden-xl .container-nav .nested-hamburger {
+    height: 100%;
+    width: 100%;
+  }
+  header.hidden-l .container-nav .nested-hamburger > li > a, header.hidden-xl .container-nav .nested-hamburger > li > a {
+    width: 76px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  header.hidden-l .container-nav, header.hidden-xl .container-nav {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  header.hidden-l .container-nav, header.hidden-xl .container-nav {
+    display: none;
+  }
+}
+header.visible-l, header.visible-xl {
+  display: none;
+}
+@media (min-width: 992px) {
+  header.visible-l, header.visible-xl {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 15%;
+    max-width: 190px;
+    height: 100%;
+    min-height: 250vh;
+    background: rgba(25, 25, 25, 0.7);
+  }
+  header.visible-l .contents, header.visible-xl .contents {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header.visible-l .contents .logo-container, header.visible-xl .contents .logo-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 55px;
+  }
+  header.visible-l .contents .logo-img, header.visible-xl .contents .logo-img {
+    width: 100%;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+  }
+  header.visible-l .contents .container-nav-about, header.visible-xl .contents .container-nav-about {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .container-nav-about > span, header.visible-xl .contents .container-nav-about > span {
+    display: none;
+  }
+  header.visible-l .contents .container-nav-about::after, header.visible-xl .contents .container-nav-about::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "About Me";
+  }
+  header.visible-l .contents .container-nav-about:hover, header.visible-l .contents .container-nav-about:focus, header.visible-xl .contents .container-nav-about:hover, header.visible-xl .contents .container-nav-about:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .container-nav-portfolio, header.visible-xl .contents .container-nav-portfolio {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .container-nav-portfolio > span, header.visible-xl .contents .container-nav-portfolio > span {
+    display: none;
+  }
+  header.visible-l .contents .container-nav-portfolio::after, header.visible-xl .contents .container-nav-portfolio::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "My Portfolio";
+  }
+  header.visible-l .contents .container-nav-portfolio:hover, header.visible-l .contents .container-nav-portfolio:focus, header.visible-xl .contents .container-nav-portfolio:hover, header.visible-xl .contents .container-nav-portfolio:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .container-nav-examples, header.visible-xl .contents .container-nav-examples {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .container-nav-examples > span, header.visible-xl .contents .container-nav-examples > span {
+    display: none;
+  }
+  header.visible-l .contents .container-nav-examples::after, header.visible-xl .contents .container-nav-examples::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "Coding Examples";
+  }
+  header.visible-l .contents .container-nav-examples:hover, header.visible-l .contents .container-nav-examples:focus, header.visible-xl .contents .container-nav-examples:hover, header.visible-xl .contents .container-nav-examples:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .container-nav-scs, header.visible-xl .contents .container-nav-scs {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .container-nav-scs > span, header.visible-xl .contents .container-nav-scs > span {
+    display: none;
+  }
+  header.visible-l .contents .container-nav-scs::after, header.visible-xl .contents .container-nav-scs::after {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    content: "Scion Coalition Scheme";
+  }
+  header.visible-l .contents .container-nav-scs:hover, header.visible-l .contents .container-nav-scs:focus, header.visible-xl .contents .container-nav-scs:hover, header.visible-xl .contents .container-nav-scs:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .container-nav-contact, header.visible-xl .contents .container-nav-contact {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .container-nav-contact > span, header.visible-xl .contents .container-nav-contact > span {
+    display: none;
+  }
+  header.visible-l .contents .container-nav-contact::after, header.visible-xl .contents .container-nav-contact::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "Contact Me";
+  }
+  header.visible-l .contents .container-nav-contact:hover, header.visible-l .contents .container-nav-contact:focus, header.visible-xl .contents .container-nav-contact:hover, header.visible-xl .contents .container-nav-contact:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+@media (min-width: 1200px) {
+  header.visible-l, header.visible-xl {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 15%;
+    max-width: 380px;
+    height: 100%;
+    min-height: 250vh;
+    background: rgba(25, 25, 25, 0.7);
+  }
+  header.visible-l .contents, header.visible-xl .contents {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  header.visible-l .contents .logo-container, header.visible-xl .contents .logo-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 55px;
+  }
+  header.visible-l .contents .logo-img, header.visible-xl .contents .logo-img {
+    width: 100%;
+  }
+  header.visible-l .contents .logo .container-nav-about, header.visible-xl .contents .logo .container-nav-about {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .logo .container-nav-about > span, header.visible-xl .contents .logo .container-nav-about > span {
+    display: none;
+  }
+  header.visible-l .contents .logo .container-nav-about::after, header.visible-xl .contents .logo .container-nav-about::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "About Me";
+  }
+  header.visible-l .contents .logo .container-nav-about:hover, header.visible-l .contents .logo .container-nav-about:focus, header.visible-xl .contents .logo .container-nav-about:hover, header.visible-xl .contents .logo .container-nav-about:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .logo .container-nav-portfolio, header.visible-xl .contents .logo .container-nav-portfolio {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .logo .container-nav-portfolio > span, header.visible-xl .contents .logo .container-nav-portfolio > span {
+    display: none;
+  }
+  header.visible-l .contents .logo .container-nav-portfolio::after, header.visible-xl .contents .logo .container-nav-portfolio::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "My Portfolio";
+  }
+  header.visible-l .contents .logo .container-nav-portfolio:hover, header.visible-l .contents .logo .container-nav-portfolio:focus, header.visible-xl .contents .logo .container-nav-portfolio:hover, header.visible-xl .contents .logo .container-nav-portfolio:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .logo .container-nav-examples, header.visible-xl .contents .logo .container-nav-examples {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .logo .container-nav-examples > span, header.visible-xl .contents .logo .container-nav-examples > span {
+    display: none;
+  }
+  header.visible-l .contents .logo .container-nav-examples::after, header.visible-xl .contents .logo .container-nav-examples::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "Coding Examples";
+  }
+  header.visible-l .contents .logo .container-nav-examples:hover, header.visible-l .contents .logo .container-nav-examples:focus, header.visible-xl .contents .logo .container-nav-examples:hover, header.visible-xl .contents .logo .container-nav-examples:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .logo .container-nav-scs, header.visible-xl .contents .logo .container-nav-scs {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .logo .container-nav-scs > span, header.visible-xl .contents .logo .container-nav-scs > span {
+    display: none;
+  }
+  header.visible-l .contents .logo .container-nav-scs::after, header.visible-xl .contents .logo .container-nav-scs::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "Scion Coalition Scheme";
+  }
+  header.visible-l .contents .logo .container-nav-scs:hover, header.visible-l .contents .logo .container-nav-scs:focus, header.visible-xl .contents .logo .container-nav-scs:hover, header.visible-xl .contents .logo .container-nav-scs:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  header.visible-l .contents .logo .container-nav-contact, header.visible-xl .contents .logo .container-nav-contact {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0;
+  }
+  header.visible-l .contents .logo .container-nav-contact > span, header.visible-xl .contents .logo .container-nav-contact > span {
+    display: none;
+  }
+  header.visible-l .contents .logo .container-nav-contact::after, header.visible-xl .contents .logo .container-nav-contact::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "Contact Me";
+  }
+  header.visible-l .contents .logo .container-nav-contact:hover, header.visible-l .contents .logo .container-nav-contact:focus, header.visible-xl .contents .logo .container-nav-contact:hover, header.visible-xl .contents .logo .container-nav-contact:focus {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
 }/*# sourceMappingURL=style.css.map */
