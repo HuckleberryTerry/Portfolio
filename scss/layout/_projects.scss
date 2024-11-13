@@ -3,14 +3,24 @@
     flex-direction: row;
     flex-wrap:wrap;
     margin:0 auto;
+    padding:35px 15px;
+    background-color:#000;
     .container{
         &-proj{
             width:300px;
             margin:0 auto;
+            text-align:center;
             &--module{
+                display:flex;
+                flex-direction:column;
+                text-decoration:none;
+                color:white;
+                font-family:$Roboto-Flex;
                 img{
-                    width:60px;
-                    height:40px;
+                    min-width:60px;
+                    min-height:40px;
+                    max-height:100%;
+                    max-width:100%;
                 }
             }
         }

@@ -13,18 +13,39 @@
         // }
         z-index:0;
         display:flex;
-        
-        &-hero{
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-content: center;
-            overflow:hidden;
-            img{
-                position:relative;
-                min-height:490px;
-                min-width:375px;
-                max-width:100%;
-                max-height:100%;
+        background-image:url('../assets/images/kelly-sikkema-r077pfFsdaU-unsplash.jpg');
+        background-size:cover;
+        min-height:490px;
+        min-width:375px;
+        max-height:100%;
+        max-width:100%;
+
+        .container-hero-text{
+            margin-left:auto;
+            margin-right:auto;
+            .hero{
+                &-name{
+                    display:block;
+                    position:relative;
+                    z-index:1;
+                    color:white;
+                    top:40%;
+                    right:0;
+                    left:0;
+                    bottom:0;
+                    margin-left:auto;
+                    margin-right:auto;
+                }
+                &-description{
+                    display:block;
+                    position:relative;
+                    color:white;
+                    z-index:1;
+                    top:42.5%;
+                    right:0;
+                    left:0;
+                    bottom:0;
+                }
             }
         }
     }
