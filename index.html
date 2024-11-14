@@ -22,27 +22,27 @@
                         </a>
                         <ul class="nested-contents">
                             <li>
-                                <a href="#" class="container-nav-about">
+                                <a href="about.html" class="container-nav-about">
                                     <span class="icon-question"> <!--I could include an image here--> </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="container-nav-portfolio">
+                                <a href="index.html#portfolio" class="container-nav-portfolio">
                                     <span class="icon-folder-open"> <!--I could include an image here--> </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="container-nav-examples">
+                                <a href="coding-examples.html" class="container-nav-examples">
                                     <span class="icon-embed2"> <!--I could include an image here--> </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="container-nav-scs">
+                                <a href="scs.html" class="container-nav-scs">
                                     <span class="icon-school"> <!--I could include an image here--> </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="container-nav-contact">
+                                <a href="index.html#contact-me" class="container-nav-contact">
                                     <span class="icon-envelope"> <!--I could include an image here--> </span>
                                 </a>
                             </li>
@@ -55,31 +55,34 @@
             <ul class="contents">
                 <li>
                     <a class="logo logo-container" href="#">
-                        <img class="logo-img" src="assets/images/75x75 Logo.png">
+                        <h1 class="logo-text">
+                            JJ
+                        </h1>
+                        <!-- <img class="logo-img" src="assets/images/75x75 Logo.png"> -->
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="container-nav-about">
+                    <a href="about.html" class="container-nav-about">
                         <span class="icon-question"> <!--I could include an image here--> </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="container-nav-portfolio">
+                    <a href="index.html#portfolio" class="container-nav-portfolio">
                         <span class="icon-folder-open"> <!--I could include an image here--> </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="container-nav-examples">
+                    <a href="coding-examples.html" class="container-nav-examples">
                         <span class="icon-embed2"> <!--I could include an image here--> </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="container-nav-scs">
+                    <a href="scs.html" class="container-nav-scs">
                         <span class="icon-school"> <!--I could include an image here--> </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="container-nav-contact">
+                    <a href="index.html#contact-me" class="container-nav-contact">
                         <span class="icon-envelope"> <!--I could include an image here--> </span>
                     </a>
                 </li>
@@ -98,7 +101,7 @@
             </div>
         </div>
         <div class="middle">
-            <div class="container container-proj">
+            <div class="container container-proj" id="portfolio">
                 <a class="container-proj--module one" href="#">
                     <img src="assets/images/600x400-Place-Holder.png">
                     <h2>Project One</h2>
@@ -152,27 +155,30 @@
                         <span class="icon-arrow-right2"></span>
                     </p>
                 </a>
-
-            <div class="form-container container">
-                <div class="form-container first-name">
-
-                </div>
-                <div class="form-container last-name">
-
-                </div>
-                <div class="form-container email">
-
-                </div>
-                <div class="form-container subject">
-
-                </div>
-                <div class="form-container message">
-
-                </div>
             </div>
         </div>
         <footer>
-            <!--  -->
+            
+            <div class="container container-footer" id="contact-me">
+                <div class="container container-contact contact">
+                    <h1 class="contact-header">
+                        Contact Us On
+                    </h1>
+                    <p class="contact-paragraph">
+                        Information About how to contact
+                    </p>
+                </div>
+                <div class="container form-container">
+                    <form class="form-container">
+                        <input id="fname" type="text" name="fname" placeholder="First Name">
+                        <input id="lname" type="text" name="lname" placeholder="Last Name"><br>
+                        <input id="email" type="text" name="email" placeholder="Email Address"><br>
+                        <input id="subject" type="text" name="subject" placeholder="Subject"><br>
+                        <textarea id="message" type="text" name="message" placeholder="Message"></textarea><br>
+                        <input class="btn btn-submit" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
