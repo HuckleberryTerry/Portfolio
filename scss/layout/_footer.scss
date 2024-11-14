@@ -1,0 +1,111 @@
+footer{
+    .container{
+        flex-wrap:wrap;
+        &-footer{
+                display:flex;
+                flex-direction: column;
+                flex-wrap:wrap;
+                align-content:center;
+                justify-content: flex-start;
+            .contact{
+                &-header{
+                    display:flex;
+                    flex-direction:row;
+                    flex-wrap: wrap;
+                    width:100%;
+                    justify-content: center;
+                    
+                }
+                &-paragraph{
+                    display:flex;
+                    flex-direction:row;
+                    flex-wrap: wrap;
+                    width:100%;
+                    justify-content: center;
+                    align-content:space-around;
+                }
+            }
+        }
+    }
+    // @include mq('m'){
+    //     .container{
+    //         &-footer{
+    //             .contact{
+    //                 display:flex;
+    //                 flex-direction: column;
+    //                 flex-wrap: wrap;
+    //                 align-content:center;
+    //                 justify-content: flex-start;
+    //                 &-header{
+    //                     display:flex;
+    //                     flex-direction: row;
+    //                     flex-wrap: wrap;
+    //                     width:100%;
+    //                     justify-content: center;
+    //                 }
+    //                 &-paragraph{
+    //                     display:flex;
+    //                     flex-direction: column;
+    //                     width:100%;
+    //                     justify-content: center;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    @include mq('l'){
+        .container{
+            padding-left:40px;
+            &-footer{
+                .contact{
+                    display:flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-content:center;
+                    justify-content: flex-start;
+                    &-header{
+                        display:flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        width:200px;
+                    }
+                    &-paragraph{
+                        display:flex;
+                        flex-direction: column;
+                        width:200px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq('xl'){
+        .container{
+            margin-left:auto;
+            margin-right:auto;
+            &-footer{
+                width:95%;
+                margin-left:auto;
+                margin-right:auto;
+                .contact{
+                    display:flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-content:center;
+                    justify-content: flex-start;
+                    &-header{
+                        display:flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        width:200px;
+                    }
+                    &-paragraph{
+                        display:flex;
+                        flex-direction: column;
+                        width:200px;
+                    }
+                }
+            }
+        }
+    }
+}
