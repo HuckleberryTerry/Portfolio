@@ -167,7 +167,7 @@ header{
             width:15%;
             max-width:190px;
             height:100%;
-            min-height:250vh;
+            min-height:270vh;
             background:rgba(25,25,25,.7);
             & .contents{
                 display:flex;
@@ -176,17 +176,38 @@ header{
                 margin-right:auto;
                 & .logo{
                     &-container{
-                        position:relative;
-                        display:flex;
-                        flex-direction: row;
-                        padding-top:55px;
+                        // position:relative;
+                        // display:flex;
+                        // flex-direction: row;
+                        // margin-top:55px;
+                        text-decoration:none;
                     }
-                    &-img{
-                        width:100%;
-                        max-width:100px;
+                    // &-img{
+                    //     width:100%;
+                    //     max-width:100px;
+                    //     margin-left:auto;
+                    //     margin-right:auto;
+                    //     padding-bottom:15px;
+                    // }
+                    &-text{
+                        //background-image:url('../assets/images/75x75\ Logo.png');
+                        position:relative;
+                        background-size:cover;
+                        background-color:rgba(0,0,0,.7);
+                        background-blend-mode: color-dodge;
+                        display:flex;
+                        flex-direction:row;
                         margin-left:auto;
                         margin-right:auto;
-                        padding-bottom:15px;
+                        padding:27.3px 28.6px;
+                        text-decoration:none;
+                        color:rgba(255,255,255,1);
+                        font-size:2.5rem;
+                        width:100px;
+                        &:hover, &:focus, &:active{
+                            background-color:rgba(155,155,155,.2);
+                            text-shadow:0 0 10px rgba(255, 244, 194, 0.5);
+                        }
                     }
                 }
                 & .container{
@@ -288,8 +309,9 @@ header{
             width:15%;
             max-width:380px;
             height:100%;
-            min-height:250vh;
+            min-height:230vh;
             background:rgba(25,25,25,.7);
+            font-size:1.2rem;
             & .contents{
                 display:flex;
                 flex-direction:column;
@@ -298,13 +320,34 @@ header{
                 width:100%;
                 & .logo{
                     &-container{
-                        position:relative;
-                        display:flex;
-                        flex-direction: row;
-                        padding-top:55px;
+                        // position:relative;
+                        // display:flex;
+                        // flex-direction: row;
+                        // margin-top:55px;
+                        text-decoration:none;
                     }
-                    &-img{
-                        width:100%;
+                    // &-img{
+                    //     width:100%;
+                    // }
+                    &-text{
+                        //background-image:url('../assets/images/75x75\ Logo.png');
+                        position:relative;
+                        background-size:cover;
+                        background-color:rgba(0,0,0,.7);
+                        background-blend-mode: color-dodge;
+                        display:flex;
+                        flex-direction:row;
+                        margin-left:auto;
+                        margin-right:auto;
+                        padding:27.3px 28.6px;
+                        text-decoration:none;
+                        color:rgba(255,255,255,1);
+                        font-size:2.5rem;
+                        width:100px;
+                        &:hover, &:focus, &:active{
+                            background-color:rgba(155,155,155,.2);
+                            text-shadow:0 0 10px rgba(255, 244, 194, 0.5);
+                        }
                     }
                     & .container{
                         &-nav{
