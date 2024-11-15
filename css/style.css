@@ -782,35 +782,40 @@ body {
     justify-content: center;
     grid-gap: 15px;
   }
+  .middle .container-proj--module {
+    height: 100%;
+    margin: 0;
+    transition: height ease 0.5s, margin ease 0.5s;
+  }
   .middle .container-proj--module.one:hover {
     border: solid 1px rgba(25, 25, 25, 0.1);
     box-shadow: 0 0 10px rgba(125, 125, 125, 0.5);
-    height: 300px;
+    height: 280px;
   }
   .middle .container-proj--module.two:hover {
     border: solid 1px rgba(25, 25, 25, 0.1);
     box-shadow: 0 0 10px rgba(125, 125, 125, 0.5);
-    height: 300px;
+    height: 280px;
   }
   .middle .container-proj--module.three:hover {
     border: solid 1px rgba(25, 25, 25, 0.1);
     box-shadow: 0 0 10px rgba(125, 125, 125, 0.5);
-    height: 300px;
+    height: 280px;
   }
   .middle .container-proj--module.four:hover {
     border: solid 1px rgba(25, 25, 25, 0.1);
     box-shadow: 0 0 10px rgba(125, 125, 125, 0.5);
-    height: 300px;
+    height: 280px;
   }
   .middle .container-proj--module.five:hover {
     border: solid 1px rgba(25, 25, 25, 0.1);
     box-shadow: 0 0 10px rgba(125, 125, 125, 0.5);
-    height: 300px;
+    height: 280px;
   }
   .middle .container-proj--module.six:hover {
     border: solid 1px rgba(25, 25, 25, 0.1);
     box-shadow: 0 0 10px rgba(125, 125, 125, 0.5);
-    height: 300px;
+    height: 280px;
   }
 }
 @media (min-width: 1200px) {
@@ -948,6 +953,9 @@ footer .container-footer .contact-paragraph {
   }
 }
 
+.middle .container {
+  padding-bottom: 50px;
+}
 .middle .container-about {
   width: 80%;
   box-shadow: 0 0 10px black;
@@ -1422,7 +1430,6 @@ header.visible-l, header.visible-xl {
     width: 15%;
     max-width: 200px;
     height: 100vh;
-    padding: 0 10px;
   }
   header.visible-l .contents .logo-container, header.visible-xl .contents .logo-container {
     text-decoration: none;
@@ -1501,7 +1508,7 @@ header.visible-l, header.visible-xl {
     display: flex;
     text-decoration: none;
     color: white;
-    padding: 15px 0;
+    padding: 15px 15px;
   }
   header.visible-l .contents .container-nav-scs > span, header.visible-xl .contents .container-nav-scs > span {
     display: none;
@@ -1624,7 +1631,7 @@ header.visible-l, header.visible-xl {
     display: flex;
     text-decoration: none;
     color: white;
-    padding: 15px 0;
+    padding: 15px 1500px;
   }
   header.visible-l .contents .logo .container-nav-scs > span, header.visible-xl .contents .logo .container-nav-scs > span {
     display: none;
