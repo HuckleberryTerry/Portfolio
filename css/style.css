@@ -953,6 +953,134 @@ footer .container-footer .contact-paragraph {
   box-shadow: 0 0 10px black;
   padding: 15px;
 }
+.middle .container-interests {
+  width: 100%;
+}
+.middle .container-interests h2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.middle .container-interests h3 {
+  display: flex;
+  flex-direction: row;
+}
+.middle .container-interests-headers {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.middle .container-interests-headers .interests-dnd {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  margin: 20px;
+  padding: 0 20px;
+  width: 250px;
+  box-shadow: 0 0 10px black;
+  color: black;
+}
+.middle .container-interests-headers .interests-dnd-image {
+  background-image: url("../assets/images/DND-Image.png");
+  background-size: cover;
+  display: flex;
+  margin: 0 50px;
+  height: 110px;
+  width: 100px;
+}
+.middle .container-interests-headers .interests-gaming {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  margin: 20px;
+  padding: 0 20px;
+  width: 250px;
+  box-shadow: 0 0 10px black;
+  color: black;
+}
+.middle .container-interests-headers .interests-gaming-image {
+  background-image: url("../assets/images/Controller-Icon.png");
+  background-size: cover;
+  display: flex;
+  margin: 0 50px;
+  height: 110px;
+  width: 115px;
+}
+.middle .container-interests-headers .interests-programming {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  margin: 20px;
+  padding: 0 20px;
+  width: 250px;
+  box-shadow: 0 0 10px black;
+  color: black;
+}
+.middle .container-interests-headers .interests-programming-image {
+  background-image: url("../assets/images/Programming-Icon.png");
+  background-size: cover;
+  display: flex;
+  margin: 0 50px;
+  height: 110px;
+  width: 140px;
+}
+@media (min-width: 992px) {
+  .middle .container-interests-headers {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .middle .container-interests-headers .interests-dnd {
+    width: 225px;
+    height: 240px;
+    transition: height ease 0.5s, width ease 0.5s;
+  }
+  .middle .container-interests-headers .interests-dnd:hover {
+    width: 300px;
+    height: 300px;
+  }
+  .middle .container-interests-headers .interests-gaming {
+    width: 225px;
+    height: 240px;
+    transition: height ease 0.5s, width ease 0.5s;
+  }
+  .middle .container-interests-headers .interests-gaming:hover {
+    width: 300px;
+    height: 300px;
+  }
+  .middle .container-interests-headers .interests-programming {
+    width: 225px;
+    height: 240px;
+    transition: height ease 0.5s, width ease 0.5s;
+  }
+  .middle .container-interests-headers .interests-programming:hover {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .middle .container-interests-headers {
+    flex-direction: row;
+  }
+  .middle .container-interests-headers .interests-dnd {
+    width: 240px;
+  }
+  .middle .container-interests-headers .interests-gaming {
+    width: 240px;
+  }
+  .middle .container-interests-headers .interests-programming {
+    width: 240px;
+  }
+}
 .middle .container-coding-examples {
   width: 80%;
   box-shadow: 0 0 10px black;
@@ -973,83 +1101,6 @@ footer .container-footer .contact-paragraph {
 .middle .container-scs .treehouse:hover {
   background-color: rgba(250, 246, 190, 0.418);
   text-shadow: 0 0 10px rgba(132, 142, 189, 0.3);
-}
-.middle .container-interests {
-  width: 100%;
-}
-.middle .container-interests h2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.middle .container-interests h3 {
-  display: flex;
-  flex-direction: row;
-}
-.middle .container-interests-headers {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-}
-.middle .container-interests-headers .interests-dnd {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-decoration: none;
-  margin: 20px;
-  padding: 0 20px;
-  width: 33.3333333333%;
-  box-shadow: 0 0 10px black;
-  color: black;
-}
-.middle .container-interests-headers .interests-dnd-image {
-  background-image: url("../assets/images/DND-Image.png");
-  background-size: cover;
-  display: flex;
-  margin: 0 50px;
-  height: 110px;
-  width: 100px;
-}
-.middle .container-interests-headers .interests-gaming {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-decoration: none;
-  margin: 20px;
-  padding: 0 20px;
-  width: 33.3333333333%;
-  box-shadow: 0 0 10px black;
-}
-.middle .container-interests-headers .interests-gaming-image {
-  background-image: url("../assets/images/Controller-Icon.png");
-  background-size: cover;
-  display: flex;
-  margin: 0 50px;
-  height: 110px;
-  width: 115px;
-}
-.middle .container-interests-headers .interests-programming {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-decoration: none;
-  margin: 20px;
-  padding: 0 20px;
-  width: 33.3333333333%;
-  box-shadow: 0 0 10px black;
-}
-.middle .container-interests-headers .interests-programming-image {
-  background-image: url("../assets/images/Programming-Icon.png");
-  background-size: cover;
-  display: flex;
-  margin: 0 50px;
-  height: 110px;
-  width: 140px;
 }
 
 footer {

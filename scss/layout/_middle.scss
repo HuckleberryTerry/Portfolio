@@ -5,27 +5,6 @@
             box-shadow:0 0 10px black;
             padding:15px;
         }
-        &-coding-examples{
-            width:80%;
-            box-shadow:0 0 10px black;
-            padding:15px;
-        }
-        &-scs{
-            width:80%;
-            box-shadow:0 0 10px black;
-            padding:15px;
-            & .treehouse{
-                text-decoration:none;
-                color:black;
-                border:solid 1px black;
-                padding:10px;
-                box-shadow:0 0 2px black;
-                &:hover{
-                    background-color:rgba(250, 246, 190, 0.418);
-                    text-shadow:0 0 10px rgba(132, 142, 189, 0.3);
-                }
-            }
-        }
         &-interests{
             width:100%;
             & h2{
@@ -43,6 +22,8 @@
                 margin-left:auto;
                 margin-right:auto;
                 justify-content:center;
+                flex-direction:column;
+                align-items:center;
                 .interests{
                     &-dnd{
                         display:inline-flex;
@@ -52,7 +33,7 @@
                         text-decoration: none;
                         margin:20px;
                         padding:0 20px;
-                        width:calc(100% / 3);
+                        width:250px;
                         box-shadow:0 0 10px black;
                         color:black;
                         &-image{
@@ -72,8 +53,9 @@
                         text-decoration: none;
                         margin:20px;
                         padding:0 20px;
-                        width:calc(100% / 3);
+                        width:250px;
                         box-shadow:0 0 10px black;
+                        color:black;
                         &-image{
                             background-image:url('../assets/images/Controller-Icon.png');
                             background-size:cover;
@@ -91,8 +73,9 @@
                         text-decoration: none;
                         margin:20px;
                         padding:0 20px;
-                        width:calc(100% / 3);
+                        width:250px;
                         box-shadow:0 0 10px black;
+                        color:black;
                         &-image{
                             background-image:url('../assets/images/Programming-Icon.png');
                             background-size:cover;
@@ -102,6 +85,74 @@
                             width:140px;
                         }
                     }
+                }
+                @include mq('l'){
+                    flex-direction:row;
+                    flex-wrap:wrap;
+                    .interests{
+                        &-dnd{
+                            width:225px;
+                            height:240px;
+                            transition:height ease .5s, width ease .5s;
+                            &:hover{
+                                width:300px;
+                                height:300px
+                            }
+                        }
+                        &-gaming{
+                            width:225px;
+                            height:240px;
+                            transition:height ease .5s, width ease .5s;
+                            &:hover{
+                                width:300px;
+                                height:300px
+                            }
+                        }
+                        &-programming{
+                            width:225px;
+                            height:240px;
+                            transition:height ease .5s, width ease .5s;
+                            &:hover{
+                                width:300px;
+                                height:300px
+                            }
+                        }
+                    }
+                }
+                @include mq('l'){
+                    flex-direction:row;
+                    .interests{
+                        &-dnd{
+                            width:240px;
+                        }
+                        &-gaming{
+                            width:240px;
+                        }
+                        &-programming{
+                            width:240px;
+                        }
+                    }
+                }
+            }
+        }
+        &-coding-examples{
+            width:80%;
+            box-shadow:0 0 10px black;
+            padding:15px;
+        }
+        &-scs{
+            width:80%;
+            box-shadow:0 0 10px black;
+            padding:15px;
+            & .treehouse{
+                text-decoration:none;
+                color:black;
+                border:solid 1px black;
+                padding:10px;
+                box-shadow:0 0 2px black;
+                &:hover{
+                    background-color:rgba(250, 246, 190, 0.418);
+                    text-shadow:0 0 10px rgba(132, 142, 189, 0.3);
                 }
             }
         }
