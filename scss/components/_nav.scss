@@ -40,7 +40,7 @@ header{
                             & + .nested-contents{
                                 display:none;
                             }
-                            &:focus, &:hover, &:active, &:focus-visible{
+                            &:active, &:focus, &:hover{
                                 width: 100%;
                                 padding:20px 70px;
                                 background-color:rgba(25,25,25,.75);
@@ -126,6 +126,15 @@ header{
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+
+                & .nested-contents{
+                    .container-nav{
+                        &-about{
+                            display:block;
+                            width:100%;
                         }
                     }
                 }
