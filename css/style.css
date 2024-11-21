@@ -767,6 +767,7 @@ body {
   margin: 0 auto;
   padding: 35px 15px;
   background-color: #fff;
+  height: 100vh;
 }
 .middle .container-proj {
   width: 300px;
