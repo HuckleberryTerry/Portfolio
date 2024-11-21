@@ -981,6 +981,9 @@ footer .container-footer .contact-paragraph {
   }
 }
 
+.middle {
+  height: 100vh;
+}
 .middle .container {
   padding-bottom: 50px;
 }
