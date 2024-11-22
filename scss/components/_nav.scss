@@ -40,7 +40,7 @@ header{
                             & + .nested-contents{
                                 display:none;
                             }
-                            &:active, &:focus, &:hover{
+                            &.__dropped{
                                 width: 100%;
                                 padding:20px 70px;
                                 background-color:rgba(25,25,25,.75);
