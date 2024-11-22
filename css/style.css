@@ -1316,107 +1316,107 @@ header.hidden-l .container-nav .nested-hamburger > li > a, header.hidden-xl .con
 header.hidden-l .container-nav .nested-hamburger > li > a + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a + .nested-contents {
   display: none;
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active, header.hidden-l .container-nav .nested-hamburger > li > a:focus, header.hidden-l .container-nav .nested-hamburger > li > a:hover, header.hidden-xl .container-nav .nested-hamburger > li > a:active, header.hidden-xl .container-nav .nested-hamburger > li > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:hover {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped {
   width: 100%;
   padding: 20px 70px;
   background-color: rgba(25, 25, 25, 0.75);
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents {
   display: flex;
   flex-direction: column;
   background-color: rgba(25, 25, 55, 0.7);
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents > a:focus, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents > a:focus, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents > a:focus {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents > a:focus {
   background-color: rgba(255, 255, 255, 0.8);
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span {
   color: white;
   float: left;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question {
   width: 100%;
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question::after {
   font-family: "Roboto Flex", sans-serif;
   content: " about me";
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-question::after {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-question::after {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open {
   width: 100%;
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open::after {
   font-family: "Roboto Flex", sans-serif;
   content: " Portfolio";
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-folder-open::after {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-folder-open::after {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2 {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2 {
   width: 100%;
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2 {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2 {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2::after {
   font-family: "Roboto Flex", sans-serif;
   content: " Coding Examples";
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-embed2::after {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-embed2::after {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school {
   width: 100%;
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school::after {
   font-family: "Roboto Flex", sans-serif;
   content: " SCS";
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-school::after {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-school::after {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope {
   width: 100%;
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope {
     font-size: 2rem;
   }
 }
-header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after {
+header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope::after {
   font-family: "Roboto Flex", sans-serif;
   content: "Contact Me";
 }
 @media (min-width: 768px) {
-  header.hidden-l .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-l .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:active + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:focus + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a:hover + .nested-contents span.icon-envelope::after {
+  header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope::after, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span.icon-envelope::after {
     font-size: 2rem;
   }
 }
