@@ -436,7 +436,6 @@ body {
 
 .middle {
   overflow: hidden;
-  height: 100vh;
 }
 
 @font-face {
@@ -690,7 +689,6 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  min-width: 375px;
   height: 100%;
   width: 100%;
   margin-left: auto;
@@ -767,7 +765,6 @@ body {
   margin: 0 auto;
   padding: 35px 15px;
   background-color: #fff;
-  height: 100vh;
 }
 .middle .container-proj {
   width: 300px;
@@ -982,9 +979,6 @@ footer .container-footer .contact-paragraph {
   }
 }
 
-.middle {
-  height: 100vh;
-}
 .middle .container {
   padding-bottom: 50px;
 }
@@ -1013,6 +1007,11 @@ footer .container-footer .contact-paragraph {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 992px) {
+  .middle .container-interests-headers {
+    align-items: flex-start;
+  }
 }
 .middle .container-interests-headers .interests-dnd {
   display: inline-flex;
@@ -1076,6 +1075,7 @@ footer .container-footer .contact-paragraph {
 }
 @media (min-width: 992px) {
   .middle .container-interests-headers {
+    height: 100vh;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -1122,14 +1122,20 @@ footer .container-footer .contact-paragraph {
   }
 }
 .middle .container-coding-examples {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   box-shadow: 0 0 10px black;
   padding: 15px;
+  height: 95vh;
+  align-items: center;
+  justify-content: center;
 }
 .middle .container-scs {
   width: 80%;
   box-shadow: 0 0 10px black;
   padding: 15px;
+  height: 92vh;
 }
 .middle .container-scs .treehouse {
   text-decoration: none;
@@ -1150,7 +1156,6 @@ footer .container {
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  min-width: 370px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -1264,6 +1269,13 @@ footer .container .form-container .btn-submit::placeholder {
     margin-left: auto;
     margin-right: auto;
   }
+  footer .container-contact {
+    padding-left: 160px;
+  }
+  footer .container .form-container {
+    float: right;
+    width: 70%;
+  }
 }
 @media (min-width: 1200px) {
   footer {
@@ -1319,15 +1331,15 @@ header.hidden-l .container-nav .nested-hamburger > li > a + .nested-contents, he
 header.hidden-l .container-nav .nested-hamburger > li > a.__dropped, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped {
   width: 100%;
   padding: 20px 70px;
-  background-color: rgba(25, 25, 25, 0.75);
+  background-color: rgba(25, 25, 25, 0.9);
 }
 header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents {
   display: flex;
   flex-direction: column;
-  background-color: rgba(25, 25, 55, 0.7);
+  background-color: rgba(25, 25, 25, 0.4);
 }
 header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents > a:focus, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents > a:focus {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 header.hidden-l .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span, header.hidden-xl .container-nav .nested-hamburger > li > a.__dropped + .nested-contents span {
   color: white;

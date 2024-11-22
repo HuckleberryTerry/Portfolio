@@ -43,13 +43,13 @@ header{
                             &.__dropped{
                                 width: 100%;
                                 padding:20px 70px;
-                                background-color:rgba(25,25,25,.75);
+                                background-color:rgba(25,25,25,.9);
                                 & + .nested-contents{
                                     display:flex;
                                     flex-direction:column;
-                                    background-color: rgba(25,25,55,.7);
+                                    background-color: rgba(25,25,25,.4);
                                     & > a:focus{
-                                        background-color:rgba(255,255,255,.8);
+                                        background-color:rgba(255,255,255,.5);
                                     }
                                     span{
                                         color:white;

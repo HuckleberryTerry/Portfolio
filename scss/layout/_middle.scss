@@ -1,5 +1,5 @@
 .middle{
-    height:100vh;
+    //height:100vh;
     .container{
         padding-bottom:50px;
         &-about{
@@ -25,7 +25,10 @@
                 margin-right:auto;
                 justify-content:center;
                 flex-direction:column;
-                align-items:center;
+                align-items: center;
+                @include mq('l'){
+                    align-items:flex-start;
+                }
                 .interests{
                     &-dnd{
                         display:inline-flex;
@@ -89,6 +92,7 @@
                     }
                 }
                 @include mq('l'){
+                    height:100vh;
                     flex-direction:row;
                     flex-wrap:wrap;
                     .interests{
@@ -138,14 +142,20 @@
             }
         }
         &-coding-examples{
+            display:flex;
+            flex-direction: column;
             width:80%;
             box-shadow:0 0 10px black;
             padding:15px;
+            height:95vh;
+            align-items: center;
+            justify-content: center;;
         }
         &-scs{
             width:80%;
             box-shadow:0 0 10px black;
             padding:15px;
+            height:92vh;
             & .treehouse{
                 text-decoration:none;
                 color:black;

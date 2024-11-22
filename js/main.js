@@ -57,3 +57,8 @@ $isActive.on('click', function(event){
     $isActive.children().addClass('__active');
     $('.__active').children('ul li a').addClass('__dropped');
 })
+
+$('.header, footer, .middle').on('click', function(event){
+    $('.__active').children('ul li a').removeClass('__dropped');
+    $isActive.children().removeClass('__active');
+})
