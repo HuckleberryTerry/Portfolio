@@ -93,6 +93,29 @@
                     &-description{
                         font-size:2rem;
                     }
+                    &-bottom-text{
+                        font-size:2rem;
+                    }
+                }
+            }
+        }
+    }
+    @include mq('l'){
+        .container{
+            .container-hero-text{
+                .hero{
+                    &-name{
+                        font-size:2rem;
+                        left:26.5%;
+                    } 
+                    &-description{
+                        font-size:2rem;
+                        left:26.5%;
+                    }
+                    &-bottom-text{
+                        font-size:2rem;
+                        left:26.5%;
+                    }
                 }
             }
         }

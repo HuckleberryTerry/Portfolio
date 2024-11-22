@@ -108,7 +108,8 @@
             </div>
         </div>
         <div class="middle">
-            <div class="container container-proj" id="portfolio">
+            <h2 class="proj-header" id="portfolio">Projects</h2>
+            <div class="container container-proj">
                 <a class="container-proj--module one" href="#">
                     <img src="assets/images/600x400-Place-Holder.png">
                     <h2>Project One</h2>
@@ -179,9 +180,9 @@
                     <form class="form-container">
                         <input id="fname" type="text" name="fname" placeholder="First Name">
                         <input id="lname" type="text" name="lname" placeholder="Last Name"><br>
-                        <input id="email" type="text" name="email" placeholder="Email Address"><br>
-                        <input id="subject" type="text" name="subject" placeholder="Subject"><br>
-                        <textarea id="message" type="text" name="message" placeholder="Message"></textarea><br>
+                        <input id="email" type="text" name="email" placeholder="Email Address" required><br>
+                        <input id="subject" type="text" name="subject" placeholder="Subject" required><br>
+                        <textarea id="message" type="text" name="message" placeholder="Message" maxlength="300"></textarea><br>
                         <input class="btn btn-submit" type="submit" value="Submit">
                     </form>
                 </div>

@@ -434,10 +434,6 @@ body {
   margin: 0 auto;
 }
 
-.middle {
-  overflow: hidden;
-}
-
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot");
@@ -756,18 +752,42 @@ body {
   .header .container .container-hero-text .hero-description {
     font-size: 2rem;
   }
+  .header .container .container-hero-text .hero-bottom-text {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .header .container .container-hero-text .hero-name {
+    font-size: 2rem;
+    left: 26.5%;
+  }
+  .header .container .container-hero-text .hero-description {
+    font-size: 2rem;
+    left: 26.5%;
+  }
+  .header .container .container-hero-text .hero-bottom-text {
+    font-size: 2rem;
+    left: 26.5%;
+  }
 }
 
 .middle {
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 35px 15px;
   background-color: #fff;
 }
+.middle .proj-header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
 .middle .container-proj {
-  width: 300px;
+  min-width: 150px;
+  max-width: 350px;
   margin: 0 auto;
 }
 .middle .container-proj--module {
@@ -1135,7 +1155,6 @@ footer .container-footer .contact-paragraph {
   width: 80%;
   box-shadow: 0 0 10px black;
   padding: 15px;
-  height: 92vh;
 }
 .middle .container-scs .treehouse {
   text-decoration: none;
@@ -1147,6 +1166,10 @@ footer .container-footer .contact-paragraph {
 .middle .container-scs .treehouse:hover {
   background-color: rgba(250, 246, 190, 0.418);
   text-shadow: 0 0 10px rgba(132, 142, 189, 0.3);
+}
+
+#about-scs {
+  height: 100vh;
 }
 
 footer {
@@ -1175,7 +1198,7 @@ footer .container .form-container #fname {
   background-color: rgba(125, 125, 125, 0.1);
   border-radius: 20px;
   border: solid 1px black;
-  padding: 5px;
+  padding: 5px 10px;
 }
 footer .container .form-container #fname::-moz-placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -1190,7 +1213,7 @@ footer .container .form-container #lname {
   background-color: rgba(125, 125, 125, 0.1);
   border-radius: 20px;
   border: solid 1px black;
-  padding: 5px;
+  padding: 5px 10px;
 }
 footer .container .form-container #lname::-moz-placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -1204,7 +1227,7 @@ footer .container .form-container #email {
   background-color: rgba(125, 125, 125, 0.1);
   border-radius: 20px;
   border: solid 1px black;
-  padding: 5px;
+  padding: 5px 10px;
 }
 footer .container .form-container #email::-moz-placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -1218,7 +1241,7 @@ footer .container .form-container #subject {
   background-color: rgba(125, 125, 125, 0.1);
   border-radius: 20px;
   border: solid 1px black;
-  padding: 5px;
+  padding: 5px 10px;
 }
 footer .container .form-container #subject::-moz-placeholder {
   color: rgba(0, 0, 0, 0.2);
