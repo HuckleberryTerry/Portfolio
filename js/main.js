@@ -121,7 +121,7 @@ $form_country.on('click', function(){
 
 $form_btn.on('click', function(event){
     if(!isValidEmail() || !isValidTelNo()){
-        //alert('Not Valid');
+        alert('Not Valid');
         event.preventDefault();
     }
     else{
