@@ -54,7 +54,7 @@
                 }
                 &-bottom-text{
                     overflow:hidden;
-                    display:flex;
+                    display:none;
                     position:relative;
                     justify-content:center;
                     z-index:1;
@@ -63,7 +63,7 @@
                     left:0;
                     right:0;
                     & .see-more{
-                        display:flex;
+                        display:none;
                         position:relative;
                         justify-content:center;
                         align-items: center;

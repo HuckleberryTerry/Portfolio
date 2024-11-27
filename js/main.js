@@ -6,7 +6,7 @@ const $heroBtmText = $('.hero-bottom-text');
 const hero_Title_str = 'Hello, I am Jozef Jenkins';
 const hero_Text_str = "I'm a web developer"
 const speed = 50;
-let i = 0;
+let spliterator = 0;
 
 //Hamburger Menu Variables
 const $isActive = $('.isActive');
@@ -14,14 +14,20 @@ const $isActive = $('.isActive');
 //Form Variables
 const $form_fName = $('#fname');
 const $form_lName = $('#lname');
+const $form_country = $('#country');
+const $form_TelNo = $('#telNo');
 const $form_email = $('#email');
 const $form_subject = $('#subject');
 const $form_message = $('#message');
 const $form_btn = $('.btn-submit');
+
+//Carousel Variables
+const $carousel_Projects = $('.container-interests-headers');
+
 //The Regex is from a website: https://www.abstractapi.com/guides/email-validation/email-address-pattern-validation
 //Once I have got to the RegEx part of the course I will break down what each part means.
-const isValidEmail = ()=>  /([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([0-9A-Za-z]([0-9A-Za-z-]{0,61}[0-9A-Za-z])?(\.[0-9A-Za-z]([0-9A-Za-z-]{0,61}[0-9A-Za-z])?)*|\[((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|IPv6:((((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){6}|::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){5}|[0-9A-Fa-f]{0,4}::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){4}|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):)?(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){3}|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,2}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){2}|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,3}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,4}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::)((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3})|(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3})|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,5}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3})|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,6}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::)|(?!IPv6:)[0-9A-Za-z-]*[0-9A-Za-z]:[!-Z^-~]+)])/.test($form_email.val());
-
+const isValidEmail = ()=>  isValidTelNo = ()=> /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/.test($form_TelNo.val());
+let isValidTelNo;
 //------------------FUNCTIONS---------------------//
 /** Type-Writer Effect using arrays
 * Splits a string into an array and appends each character to a specified class or id.
@@ -37,10 +43,10 @@ const isValidEmail = ()=>  /([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|"([
 const splitStr = (name, text)=>{
     let hero_arr = text.split('');
     setTimeout(function() {
-        if (i < hero_arr.length){
+        if (spliterator < hero_arr.length){
             setTimeout(splitStr(name, text), speed);
-            name.append(hero_arr[i]);
-            i++;
+            name.append(hero_arr[spliterator]);
+            spliterator++;
         }
         return name;
     }, speed); 
@@ -76,7 +82,6 @@ $heroBtmText.hide();
 
 setTimeout(function(){
     $heroText.fadeIn(3000);
-    $heroBtmText.fadeIn(3000);
 }, 3000);
 
 //------------------FORM VALIDATION---------------------//
@@ -87,11 +92,49 @@ setTimeout(function(){
 // $form_lName.hide();
 // $form_message.hide();
 // $form_subject.hide();
-$form_btn.on('click', function(){
-    if(!isValidEmail()){
-        alert('Not Valid');
+let $form_country_options = $form_country.children();
+$form_country.on('click', function(){
+    //console.log($form_county_options);
+    //for(let i=0; i<$form_country_options.length; i++){
+        $form_country.children().removeClass('active');
+        if($form_country.val() === 'UK'){
+            $form_TelNo.attr('placeholder', '+44 1234 567890');
+            $form_country.children('option#UK').addClass('active');
+            console.log($form_country.children('.active').val());
+        }
+        else if($form_country.val() === 'US'){
+            $form_TelNo.attr('placeholder', '(123) 123-1234');
+            console.log(isValidTelNo());
+            $form_country.children('option#US').addClass('active');
+            console.log($form_country.children('.active').val());
+        }
+        else if($form_country.val() === 'IT'){
+            $form_TelNo.attr('placeholder', '+39 123 4567891');
+            $form_country.children('option#IT').addClass('active');
+            console.log($form_country.children('.active').val());
+        }
+        else{
+            return undefined;
+        }
+    //}
+});
+
+$form_btn.on('click', function(event){
+    if(!isValidEmail() || !isValidTelNo()){
+        //alert('Not Valid');
+        event.preventDefault();
     }
     else{
         alert('valid');
     }
 })
+
+//------------------INTERESTS CAROUSEL---------------------//
+$(document).ready(function(){
+    $('.container-interests-headers').slick({
+        arrows:             false,
+        dots:               true,
+        slidesToShow:       3,
+        
+    });
+});

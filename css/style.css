@@ -720,7 +720,7 @@ body {
 }
 .header .container .container-hero-text .hero-bottom-text {
   overflow: hidden;
-  display: flex;
+  display: none;
   position: relative;
   justify-content: center;
   z-index: 1;
@@ -730,7 +730,7 @@ body {
   right: 0;
 }
 .header .container .container-hero-text .hero-bottom-text .see-more {
-  display: flex;
+  display: none;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -1003,143 +1003,117 @@ footer .container-footer .contact-paragraph {
   padding-bottom: 50px;
 }
 .middle .container-about {
-  width: 80%;
+  width: 65vw;
   box-shadow: 0 0 10px black;
   padding: 15px;
 }
 .middle .container-interests {
-  width: 100%;
+  width: 78vw;
+}
+.middle .container-interests .slick-dots {
+  padding-bottom: 50px;
 }
 .middle .container-interests h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  border-bottom: solid 1px rgba(228, 228, 228, 0.626);
 }
 .middle .container-interests h3 {
   display: flex;
   flex-direction: row;
 }
 .middle .container-interests-headers {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 992px) {
-  .middle .container-interests-headers {
-    align-items: flex-start;
-  }
-}
 .middle .container-interests-headers .interests-dnd {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   text-decoration: none;
   margin: 20px;
   padding: 0 20px;
-  width: 250px;
   box-shadow: 0 0 10px black;
   color: black;
 }
 .middle .container-interests-headers .interests-dnd-image {
-  background-image: url("../assets/images/DND-Image.png");
+  background-image: url("../assets/images/100x100-Place-Holder.png");
   background-size: cover;
   display: flex;
   margin: 0 50px;
-  height: 110px;
+  height: 100px;
   width: 100px;
 }
 .middle .container-interests-headers .interests-gaming {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   text-decoration: none;
   margin: 20px;
   padding: 0 20px;
-  width: 250px;
   box-shadow: 0 0 10px black;
   color: black;
 }
 .middle .container-interests-headers .interests-gaming-image {
-  background-image: url("../assets/images/Controller-Icon.png");
+  background-image: url("../assets/images/100x100-Place-Holder.png");
   background-size: cover;
   display: flex;
   margin: 0 50px;
-  height: 110px;
-  width: 115px;
+  height: 100px;
+  width: 100px;
 }
 .middle .container-interests-headers .interests-programming {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   text-decoration: none;
   margin: 20px;
   padding: 0 20px;
-  width: 250px;
   box-shadow: 0 0 10px black;
   color: black;
 }
 .middle .container-interests-headers .interests-programming-image {
-  background-image: url("../assets/images/Programming-Icon.png");
+  background-image: url("../assets/images/100x100-Place-Holder.png");
   background-size: cover;
   display: flex;
   margin: 0 50px;
-  height: 110px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
 }
-@media (min-width: 992px) {
-  .middle .container-interests-headers {
-    height: 100vh;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .middle .container-interests-headers .interests-dnd {
-    width: 225px;
-    height: 240px;
-    transition: height ease 0.5s, width ease 0.5s;
-  }
-  .middle .container-interests-headers .interests-dnd:hover {
-    width: 300px;
-    height: 300px;
-  }
-  .middle .container-interests-headers .interests-gaming {
-    width: 225px;
-    height: 240px;
-    transition: height ease 0.5s, width ease 0.5s;
-  }
-  .middle .container-interests-headers .interests-gaming:hover {
-    width: 300px;
-    height: 300px;
-  }
-  .middle .container-interests-headers .interests-programming {
-    width: 225px;
-    height: 240px;
-    transition: height ease 0.5s, width ease 0.5s;
-  }
-  .middle .container-interests-headers .interests-programming:hover {
-    width: 300px;
-    height: 300px;
-  }
+.middle .container-interests-headers .interests-reading {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  margin: 20px;
+  padding: 0 20px;
+  box-shadow: 0 0 10px black;
+  color: black;
 }
-@media (min-width: 992px) {
-  .middle .container-interests-headers {
-    flex-direction: row;
-  }
-  .middle .container-interests-headers .interests-dnd {
-    width: 240px;
-  }
-  .middle .container-interests-headers .interests-gaming {
-    width: 240px;
-  }
-  .middle .container-interests-headers .interests-programming {
-    width: 240px;
-  }
+.middle .container-interests-headers .interests-reading-image {
+  background-image: url("../assets/images/100x100-Place-Holder.png");
+  background-size: cover;
+  display: flex;
+  margin: 0 50px;
+  height: 100px;
+  width: 100px;
 }
 .middle .container-coding-examples {
   display: flex;

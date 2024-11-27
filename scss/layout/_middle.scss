@@ -3,139 +3,115 @@
     .container{
         padding-bottom:50px;
         &-about{
-            width:80%;
+            width:65vw;
             box-shadow:0 0 10px black;
             padding:15px;
         }
         &-interests{
-            width:100%;
+            width:78vw;
+            .slick-dots{
+                padding-bottom:50px;
+            }
             & h2{
                 display:flex;
                 flex-direction:row;
                 flex-wrap:wrap;
                 justify-content:center;
+                border-bottom:solid 1px rgba(228, 228, 228, 0.626);
             }
             & h3{
                 display:flex;
                 flex-direction: row;
             }
             &-headers{
-                display:flex;
                 margin-left:auto;
                 margin-right:auto;
                 justify-content:center;
                 flex-direction:column;
                 align-items: center;
-                @include mq('l'){
-                    align-items:flex-start;
-                }
                 .interests{
                     &-dnd{
-                        display:inline-flex;
-                        flex-direction:row;
+                        display:flex;
+                        flex-direction:column;
                         flex-wrap:wrap;
                         justify-content:center;
+                        align-items:center;
+                        align-content:center;
                         text-decoration: none;
                         margin:20px;
                         padding:0 20px;
-                        width:250px;
                         box-shadow:0 0 10px black;
                         color:black;
                         &-image{
-                            background-image:url('../assets/images/DND-Image.png');
+                            background-image:url('../assets/images/100x100-Place-Holder.png');
                             background-size:cover;
                             display:flex;
                             margin:0 50px;
-                            height:110px;
+                            height:100px;
                             width:100px;
                         }
                     }
                     &-gaming{
-                        display:inline-flex;
-                        flex-direction:row;
+                        display:flex;
+                        flex-direction:column;
                         flex-wrap:wrap;
                         justify-content:center;
+                        align-items:center; 
+                        align-content:center;
                         text-decoration: none;
                         margin:20px;
                         padding:0 20px;
-                        width:250px;
                         box-shadow:0 0 10px black;
                         color:black;
                         &-image{
-                            background-image:url('../assets/images/Controller-Icon.png');
+                            background-image:url('../assets/images/100x100-Place-Holder.png');
                             background-size:cover;
                             display:flex;
                             margin:0 50px;
-                            height:110px;
-                            width:115px;
+                            height:100px;
+                            width:100px;
                         }
                     }
                     &-programming{
-                        display:inline-flex;
-                        flex-direction:row;
+                        display:flex;
+                        flex-direction:column;
                         flex-wrap:wrap;
                         justify-content:center;
+                        align-items:center;
+                        align-content:center;
                         text-decoration: none;
                         margin:20px;
                         padding:0 20px;
-                        width:250px;
                         box-shadow:0 0 10px black;
                         color:black;
                         &-image{
-                            background-image:url('../assets/images/Programming-Icon.png');
+                            background-image:url('../assets/images/100x100-Place-Holder.png');
                             background-size:cover;
                             display:flex;
                             margin:0 50px;
-                            height:110px;
-                            width:140px;
+                            height:100px;
+                            width:100px;
                         }
                     }
-                }
-                @include mq('l'){
-                    height:100vh;
-                    flex-direction:row;
-                    flex-wrap:wrap;
-                    .interests{
-                        &-dnd{
-                            width:225px;
-                            height:240px;
-                            transition:height ease .5s, width ease .5s;
-                            &:hover{
-                                width:300px;
-                                height:300px
-                            }
-                        }
-                        &-gaming{
-                            width:225px;
-                            height:240px;
-                            transition:height ease .5s, width ease .5s;
-                            &:hover{
-                                width:300px;
-                                height:300px
-                            }
-                        }
-                        &-programming{
-                            width:225px;
-                            height:240px;
-                            transition:height ease .5s, width ease .5s;
-                            &:hover{
-                                width:300px;
-                                height:300px
-                            }
-                        }
-                    }
-                }
-                @include mq('l'){
-                    flex-direction:row;
-                    .interests{
-                        &-dnd{
-                            width:240px;
-                        }
-                        &-gaming{
-                            width:240px;
-                        }
-                        &-programming{
-                            width:240px;
+                    &-reading{
+                        display:flex;
+                        flex-direction:column;
+                        flex-wrap:wrap;
+                        justify-content:center;
+                        align-items:center;
+                        align-content:center;
+                        text-decoration: none;
+                        margin:20px;
+                        padding:0 20px;
+                        box-shadow:0 0 10px black;
+                        color:black;
+                        &-image{
+                            background-image:url('../assets/images/100x100-Place-Holder.png');
+                            background-size:cover;
+                            display:flex;
+                            margin:0 50px;
+                            height:100px;
+                            width:100px;
                         }
                     }
                 }

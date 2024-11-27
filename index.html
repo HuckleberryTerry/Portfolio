@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width", initial-scale="1", maximum scale="1">
         <title>Jozef Jenkins &hyphen; Portfolio</title>
+        <link rel="stylesheet" href="js/slick/slick.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -177,25 +178,28 @@
                     </p>
                 </div>
                 <div class="container form-container">
-                    <form class="form-container">
+                    <!-- Unsecure version, need to update to php when able to. -->
+                    <form class="form-container" action="mailto:example@example.com" method="POST">
                         <input id="fname" type="text" name="fname" placeholder="First Name">
                         <input id="lname" type="text" name="lname" placeholder="Last Name"><br>
                         <div id="country-container">
                             <select id="country">
-                                <option>UK</option>
-                                <option>US</option>
+                                <option id="UK" value="UK">UK</option>
+                                <option id="US" value="US">US</option>
+                                <option id="IT" value="IT">IT</option>
                             </select>
                         </div>
-                        <input id="telNo" type="tel" name="telNo" placeholder="xxxxx xxxxxx" required>
+                        <input id="telNo" type="tel" name="telNo" placeholder='+44 1234 567890' required>
                         <input id="email" type="text" name="email" placeholder="Email Address" required><br>
                         <input id="subject" type="text" name="subject" placeholder="Subject"><br>
-                        <textarea id="message" type="text" name="message" placeholder="Message" maxlength="300"></textarea><br>
+                        <textarea id="message" type="text" name="body" placeholder="Message" maxlength="300"></textarea><br>
                         <input class="btn btn-submit" type="submit" value="Submit">
                     </form>
                 </div>
             </div>
         </footer>
         <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
