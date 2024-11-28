@@ -1010,6 +1010,87 @@ footer .container-footer .contact-paragraph {
 .middle .container-interests {
   width: 78vw;
 }
+.middle .container-interests #modal-dnd {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.middle .container-interests #modal-programming {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.middle .container-interests #modal-gaming {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.middle .container-interests #modal-reading {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.middle .container-interests .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50vw;
+  height: 100%;
+}
+.middle .container-interests .modal-close {
+  position: absolute;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 0 8px;
+  border-radius: 20px;
+  background-color: red;
+}
+.middle .container-interests .modal-close:hover, .middle .container-interests .modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 .middle .container-interests .slick-dots {
   padding-bottom: 50px;
 }

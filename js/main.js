@@ -134,7 +134,38 @@ $(document).ready(function(){
     $('.container-interests-headers').slick({
         arrows:             false,
         dots:               true,
-        slidesToShow:       3,
-        
+        autoplay:           true,
+        draggable:          false,
     });
 });
+
+//------------------INTERESTS MODAL---------------------//
+const $interests_dnd = $('.interests-dnd');
+const $interests_modal_dnd = $('#modal-dnd');
+const $interests_programming = $('.interests-programming');
+const $interests_modal_programming = $('#modal-programming');
+const $interests_gaming = $('.interests-gaming');
+const $interests_modal_gaming= $('#modal-gaming');
+const $interests_reading = $('.interests-reading');
+const $interests_modal_reading= $('#modal-reading');
+const $modal_close = $('.modal-close');
+
+$interests_dnd.on('click', function(){
+    $interests_modal_dnd.css('display', 'flex');
+})
+$interests_programming.on('click', function(){
+    $interests_modal_programming.css('display', 'flex');
+})
+$interests_gaming.on('click', function(){
+    $interests_modal_gaming.css('display', 'flex');
+})
+$interests_reading.on('click', function(){
+    $interests_modal_reading.css('display', 'flex');
+})
+$modal_close.on('click', function(){
+    $interests_modal_dnd.css('display', 'none');
+    $interests_modal_programming.css('display', 'none');
+    $interests_modal_gaming.css('display', 'none');
+    $interests_modal_reading.css('display', 'none');
+})
+
