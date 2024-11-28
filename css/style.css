@@ -1072,8 +1072,26 @@ footer .container-footer .contact-paragraph {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50vw;
-  height: 100%;
+  height: 50vh;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .middle .container-interests .modal-content {
+    height: 75%;
+    width: 50vw;
+  }
+}
+@media (min-width: 992px) {
+  .middle .container-interests .modal-content {
+    height: 100%;
+    width: 50vw;
+  }
+}
+@media (min-width: 1200px) {
+  .middle .container-interests .modal-content {
+    height: 100%;
+    width: 50vw;
+  }
 }
 .middle .container-interests .modal-close {
   position: absolute;
