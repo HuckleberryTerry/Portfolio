@@ -1348,12 +1348,19 @@ footer .container .form-container #message::placeholder {
 footer .container .form-container .btn-submit {
   display: block;
   margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.742);
+  border-radius: 10px;
+  border: solid 1px black;
 }
 footer .container .form-container .btn-submit::-moz-placeholder {
   color: black;
 }
 footer .container .form-container .btn-submit::placeholder {
   color: black;
+}
+footer .container .form-container .btn-submit:hover {
+  background-color: rgba(66, 66, 66, 0.742);
+  color: white;
 }
 @media (min-width: 576px) {
   footer {
