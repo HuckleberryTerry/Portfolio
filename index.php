@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    use PHPMailer\PHPMailer\PHPMailer;
+
+    require_once realpath(__DIR__ . "/vendor/autoload.php");
+    use Dotenv\Dotenv;
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+    include('inc/connection.php');
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,86 +19,11 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header class="hidden-l hidden-xl">
-            <!-- Within the header I should include the "Logo" and also 
-             the navbar (static, along the left-side of the screen, vertically styled).
-             
-             I could also include the Hero Image in this section and make it all one large header
-             -->
-            <div class="container container-nav">
-                <ul class="nested-hamburger isActive">
-                    <li>
-                        <a tabindex="0" class="dropdown-menu">
-                            <span class="icon-menu"></span>
-                        </a>
-                        <ul class="nested-contents">
-                            <li>
-                                <a href="about.html#about-me" class="container-nav-about">
-                                    <span class="icon-question"> <!--I could include an image here--> </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#portfolio" class="container-nav-portfolio">
-                                    <span class="icon-folder-open"> <!--I could include an image here--> </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="coding-examples.html#coding-examples" class="container-nav-examples">
-                                    <span class="icon-embed2"> <!--I could include an image here--> </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="scs.html#about-scs" class="container-nav-scs">
-                                    <span class="icon-school"> <!--I could include an image here--> </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#contact-me" class="container-nav-contact">
-                                    <span class="icon-envelope"> <!--I could include an image here--> </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <header class="visible-l visible-xl">
-            <ul class="contents">
-                <li>
-                    <a class="logo logo-container" href="#">
-                        <h1 class="logo-text">
-                            JJ
-                        </h1>
-                        <!-- <img class="logo-img" src="assets/images/75x75 Logo.png"> -->
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html#about-me" class="container-nav-about">
-                        <span class="icon-question"> <!--I could include an image here--> </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#portfolio" class="container-nav-portfolio">
-                        <span class="icon-folder-open"> <!--I could include an image here--> </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="coding-examples.html#coding-examples" class="container-nav-examples">
-                        <span class="icon-embed2"> <!--I could include an image here--> </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="scs.html#about-scs" class="container-nav-scs">
-                        <span class="icon-school"> <!--I could include an image here--> </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#contact-me" class="container-nav-contact">
-                        <span class="icon-envelope"> <!--I could include an image here--> </span>
-                    </a>
-                </li>
-            </ul>
-        </header>
+        
+        <?php
+        include('inc/side-menu.php');
+        ?>
+
         <div class="header">
             <div class="container container-hero">
                 <div class="container-hero-text">
@@ -179,7 +114,8 @@
                 </div>
                 <div class="container form-container">
                     <!-- Unsecure version, need to update to php when able to. -->
-                    <form class="form-container" action="mailto:example@example.com" method="POST">
+                    <!-- action="mailto:example@example.com" -->
+                    <form autocomplete='off' class="form-container" method="POST" action="action.php">
                         <input id="fname" type="text" name="fname" placeholder="First Name">
                         <input id="lname" type="text" name="lname" placeholder="Last Name"><br>
                         <div id="country-container">
@@ -189,12 +125,25 @@
                                 <option id="IT" value="IT">IT</option>
                             </select>
                         </div>
-                        <input id="telNo" type="tel" name="telNo" placeholder='+44 1234 567890' required>
+                        <input id="telNo" type="tel" name="telNo" placeholder='Telephone Number' required>
                         <input id="email" type="text" name="email" placeholder="Email Address" required><br>
                         <input id="subject" type="text" name="subject" placeholder="Subject"><br>
                         <textarea id="message" type="text" name="body" placeholder="Message" maxlength="300"></textarea><br>
                         <input class="btn btn-submit" type="submit" value="Submit">
                     </form>
+                    <div class="valid">
+                        <?php
+                            if(isset($_SESSION['success_message'])){
+                                echo '<p style="color: green;">' . $_SESSION['success_message'] . '</p>';
+
+                                unset($_SESSION['success_message']);
+                            }
+
+                        ?>
+                    </div>
+                    <div class="invalid">
+                        <!-- Add PHP to list invalid fields -->
+                    </div>
                 </div>
             </div>
         </footer>

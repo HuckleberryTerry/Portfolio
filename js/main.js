@@ -16,7 +16,7 @@ const $form_fName = $('#fname');
 const $form_lName = $('#lname');
 const $form_country = $('#country');
 const $form_TelNo = $('#telNo');
-const $form_email = $('#email');
+let $form_email = $('#email');
 const $form_subject = $('#subject');
 const $form_message = $('#message');
 const $form_btn = $('.btn-submit');
@@ -26,8 +26,8 @@ const $carousel_Projects = $('.container-interests-headers');
 
 //The Regex is from a website: https://www.abstractapi.com/guides/email-validation/email-address-pattern-validation
 //Once I have got to the RegEx part of the course I will break down what each part means.
-const isValidEmail = ()=>  isValidTelNo = ()=> /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/.test($form_TelNo.val());
-let isValidTelNo;
+const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+const isValidTelNo = /((?:|00)[17](?: |-)?|(?:|00)[1-9]\d{0,2}(?: |-)?|(?:|00)1-\d{3}(?: |-)?)?(0\d|([0-9]{3})|[1-9]{0,3})(?:((?: |-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |-)[0-9]{3}(?: |-)[0-9]{4})|([0-9]{7}))/;
 //------------------FUNCTIONS---------------------//
 /** Type-Writer Effect using arrays
 * Splits a string into an array and appends each character to a specified class or id.
@@ -98,18 +98,12 @@ $form_country.on('click', function(){
     //for(let i=0; i<$form_country_options.length; i++){
         $form_country.children().removeClass('active');
         if($form_country.val() === 'UK'){
-            $form_TelNo.attr('placeholder', '+44 1234 567890');
+            $form_TelNo.attr('placeholder', '');
             $form_country.children('option#UK').addClass('active');
             console.log($form_country.children('.active').val());
         }
-        else if($form_country.val() === 'US'){
-            $form_TelNo.attr('placeholder', '(123) 123-1234');
-            console.log(isValidTelNo());
-            $form_country.children('option#US').addClass('active');
-            console.log($form_country.children('.active').val());
-        }
         else if($form_country.val() === 'IT'){
-            $form_TelNo.attr('placeholder', '+39 123 4567891');
+            $form_TelNo.attr('placeholder', '');
             $form_country.children('option#IT').addClass('active');
             console.log($form_country.children('.active').val());
         }
@@ -120,12 +114,34 @@ $form_country.on('click', function(){
 });
 
 $form_btn.on('click', function(event){
-    if(!isValidEmail() || !isValidTelNo()){
-        alert('Not Valid');
+    let emailTest = isValidEmail.test($form_email.val());
+    let telNoTest = isValidTelNo.test($form_TelNo.val());
+    if(!(emailTest) || !(telNoTest)){
+        if(!(emailTest)){
+            $form_email.css({
+                "border": "1px solid red"
+            });
+        }
+        else{
+            $form_email.css({
+                "border": "1px solid black"
+            });
+        }
+        if(!(telNoTest)){
+            $form_TelNo.css({
+                "border": "1px solid red"
+            });
+        }
+        else{
+            $form_TelNo.css({
+                "border": "1px solid black"
+            });
+        }
+        //alert('Not Valid');
         event.preventDefault();
     }
     else{
-        alert('valid');
+        return true;
     }
 })
 

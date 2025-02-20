@@ -110,8 +110,7 @@ a:hover {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -1264,6 +1263,9 @@ footer .container .form-container {
   max-width: 585px;
   padding: 10px;
 }
+footer .container .form-container .invalid {
+  display: none;
+}
 footer .container .form-container #fname {
   width: 45%;
   margin-right: auto;
@@ -1272,9 +1274,6 @@ footer .container .form-container #fname {
   border-radius: 20px;
   border: solid 1px black;
   padding: 5px 10px;
-}
-footer .container .form-container #fname::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
 }
 footer .container .form-container #fname::placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -1287,9 +1286,6 @@ footer .container .form-container #lname {
   border-radius: 20px;
   border: solid 1px black;
   padding: 5px 10px;
-}
-footer .container .form-container #lname::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
 }
 footer .container .form-container #lname::placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -1313,9 +1309,6 @@ footer .container .form-container #telNo {
   border: solid 1px black;
   padding: 5px 10px;
 }
-footer .container .form-container #telNo::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
-}
 footer .container .form-container #telNo::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
@@ -1327,9 +1320,6 @@ footer .container .form-container #email {
   border: solid 1px black;
   padding: 5px 10px;
 }
-footer .container .form-container #email::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
-}
 footer .container .form-container #email::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
@@ -1340,9 +1330,6 @@ footer .container .form-container #subject {
   border-radius: 20px;
   border: solid 1px black;
   padding: 5px 10px;
-}
-footer .container .form-container #subject::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
 }
 footer .container .form-container #subject::placeholder {
   color: rgba(0, 0, 0, 0.2);
@@ -1357,9 +1344,6 @@ footer .container .form-container #message {
   border: solid 1px black;
   padding: 10px;
 }
-footer .container .form-container #message::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.2);
-}
 footer .container .form-container #message::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
@@ -1369,9 +1353,6 @@ footer .container .form-container .btn-submit {
   background-color: rgba(255, 255, 255, 0.742);
   border-radius: 10px;
   border: solid 1px black;
-}
-footer .container .form-container .btn-submit::-moz-placeholder {
-  color: black;
 }
 footer .container .form-container .btn-submit::placeholder {
   color: black;
