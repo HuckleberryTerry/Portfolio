@@ -33,12 +33,12 @@
         $lname = htmlspecialchars($_POST['lname']);
         $title = htmlspecialchars($_POST['subject']);
         $body = htmlspecialchars($_POST['body']);
-        echo "First Name: " . $fname . "\n" .
-                "Last Name: " . $lname . "\n" .
-                "Telephone Number: " . $telNo . "\n" .
-                "Email: " . $email . "\n" .
-                "Subject: " . $title . "\n" .
-                "Message: " . $body . "\n";
+        // echo "First Name: " . $fname . "\n" .
+        //         "Last Name: " . $lname . "\n" .
+        //         "Telephone Number: " . $telNo . "\n" .
+        //         "Email: " . $email . "\n" .
+        //         "Subject: " . $title . "\n" .
+        //         "Message: " . $body . "\n";
     }
 
     $mail = new PHPMailer();

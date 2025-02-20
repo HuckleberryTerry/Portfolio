@@ -1263,9 +1263,6 @@ footer .container .form-container {
   max-width: 585px;
   padding: 10px;
 }
-footer .container .form-container .invalid {
-  display: none;
-}
 footer .container .form-container #fname {
   width: 45%;
   margin-right: auto;
@@ -1570,6 +1567,7 @@ header.hidden-l .container-nav .nested-contents .container-nav-about, header.hid
 }
 header.visible-l, header.visible-xl {
   display: none;
+  z-index: 2;
 }
 @media (min-width: 992px) {
   header.visible-l, header.visible-xl {
@@ -1818,4 +1816,35 @@ header.visible-l, header.visible-xl {
   header.visible-l .contents .logo .container-nav-contact:hover, header.visible-l .contents .logo .container-nav-contact:focus, header.visible-xl .contents .logo .container-nav-contact:hover, header.visible-xl .contents .logo .container-nav-contact:focus {
     background-color: rgba(0, 0, 0, 0.75);
   }
+}
+
+.invalid {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  position: sticky;
+  top: 0px;
+  height: 0px;
+  z-index: 1;
+}
+.invalid > span {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  color: white;
+  padding-right: 10px;
+  margin-top: 5px;
+}
+.invalid > span::before {
+  margin: 0 15px;
+}
+
+.valid {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  height: 0px;
+  top: 0px;
+  background-color: green;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

@@ -114,28 +114,46 @@ $form_country.on('click', function(){
 });
 
 $form_btn.on('click', function(event){
+    let $error = $('.invalid');
     let emailTest = isValidEmail.test($form_email.val());
     let telNoTest = isValidTelNo.test($form_TelNo.val());
     if(!(emailTest) || !(telNoTest)){
+        $('.invalid').css({
+            'display': 'flex'
+        });
         if(!(emailTest)){
             $form_email.css({
                 "border": "1px solid red"
             });
+            if($('#error-email').length < 1){
+                $error.append('<span id="error-email" class="fa-solid fa-triangle-exclamation"><p>Error: Invalid Email Address</p></span>');
+            }
+            else{
+                console.log('error already exists');
+            }
         }
         else{
             $form_email.css({
                 "border": "1px solid black"
             });
+            $('.error-email').remove();
         }
         if(!(telNoTest)){
             $form_TelNo.css({
                 "border": "1px solid red"
             });
+            if($('#error-telNo').length < 1){
+                $error.append('<span id="error-telNo" class="fa-solid fa-triangle-exclamation"><p>Error: Invalid Telephone Number</p></span>');
+            }
+            else{
+                console.log('TelNo Error already exists');
+            }
         }
         else{
             $form_TelNo.css({
                 "border": "1px solid black"
             });
+            $('.error-telNo').remove();
         }
         //alert('Not Valid');
         event.preventDefault();

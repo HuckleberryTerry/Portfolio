@@ -169,6 +169,7 @@ header{
     }
     &.visible-l, &.visible-xl{
         display:none;
+        z-index:2;
         @include mq('l'){
             display:flex;
             position:sticky;

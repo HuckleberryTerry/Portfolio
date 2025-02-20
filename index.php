@@ -17,12 +17,27 @@
         <title>Jozef Jenkins &hyphen; Portfolio</title>
         <link rel="stylesheet" href="js/slick/slick.css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/2e919e85b3.js" crossorigin="anonymous"></script>
     </head>
     <body>
         
         <?php
         include('inc/side-menu.php');
         ?>
+
+        <div class="valid">
+            <?php
+                if(isset($_SESSION['success_message'])){
+                    echo '<p style="color: green;">' . $_SESSION['success_message'] . '</p>';
+
+                    unset($_SESSION['success_message']);
+                }
+
+            ?>
+        </div>
+        <div class="invalid container">
+            <!-- Add PHP to list invalid fields -->
+        </div>
 
         <div class="header">
             <div class="container container-hero">
@@ -101,6 +116,7 @@
                 </a>
             </div>
         </div>
+
         <footer>
             
             <div class="container container-footer" id="contact-me">
@@ -131,19 +147,6 @@
                         <textarea id="message" type="text" name="body" placeholder="Message" maxlength="300"></textarea><br>
                         <input class="btn btn-submit" type="submit" value="Submit">
                     </form>
-                    <div class="valid">
-                        <?php
-                            if(isset($_SESSION['success_message'])){
-                                echo '<p style="color: green;">' . $_SESSION['success_message'] . '</p>';
-
-                                unset($_SESSION['success_message']);
-                            }
-
-                        ?>
-                    </div>
-                    <div class="invalid">
-                        <!-- Add PHP to list invalid fields -->
-                    </div>
                 </div>
             </div>
         </footer>
